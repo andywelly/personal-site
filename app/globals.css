@@ -1,57 +1,96 @@
 /* globals.css */
 
-/* Apply a stone-colored background */
+/* Import the 'Inter' font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Apply a modern dark theme with improved typography */
+:root {
+  --background-color: #1e1e1e; /* Dark background */
+  --text-color: #e0e0e0; /* Light gray text for contrast */
+  --accent-color: #ff6f61; /* Vibrant accent color */
+  --font-family: 'Inter', sans-serif; /* Modern, clean font */
+  --max-width: 800px;
+  --border-radius: 12px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --nav-background: #2c2c2c; /* Slightly lighter dark for nav */
+  --footer-background: #2c2c2c;
+  --spacing-unit: 16px;
+}
+
+/* Reset default browser styles for consistency */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply global styles */
 body {
-  background-color: #B7B09C; /* Soft stone color */
-  color: #333; /* Dark gray text for contrast */
-  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  line-height: 1.6;
   margin: 0;
   padding: 0;
 }
 
-/* Ensure all elements use a box-sizing model */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* Add a simple layout with centered content */
+/* Center content with a max-width and responsive padding */
 main {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: var(--max-width);
+  margin: calc(var(--spacing-unit) * 2) auto;
+  padding: var(--spacing-unit);
+  background: #2a2a2a;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
-/* Style the navigation */
+/* Style the navigation bar */
 nav {
-  background: #8A817C; /* A slightly darker stone color */
-  padding: 10px;
+  background: var(--nav-background);
+  padding: var(--spacing-unit);
   text-align: center;
+  border-bottom: 1px solid #444;
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
-}
-
-nav li {
-  display: inline;
-  margin: 0 15px;
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-unit);
 }
 
 nav a {
   text-decoration: none;
-  color: white;
-  font-weight: bold;
+  color: var(--text-color);
+  font-weight: 500;
+  padding: var(--spacing-unit) calc(var(--spacing-unit) * 1.5);
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--accent-color);
+  color: #fff;
 }
 
 /* Footer styling */
 footer {
   text-align: center;
-  padding: 20px;
-  background: #8A817C;
-  color: white;
-  margin-top: 40px;
+  padding: var(--spacing-unit);
+  background: var(--footer-background);
+  color: var(--text-color);
+  margin-top: calc(var(--spacing-unit) * 2);
+  border-top: 1px solid #444;
+}
+
+/* Responsive typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-bottom: var(--spacing-unit);
+}
+
+p {
+  margin-bottom: var(--spacing-unit);
 }

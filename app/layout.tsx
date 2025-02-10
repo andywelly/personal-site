@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </header>
         <main>{children}</main>
         <footer>
-          <p>&copy; {new Date().getFullYear()} My Personal Website. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Andwele Ancheta. All rights reserved.</p>
         </footer>
       </body>
     </html>
