@@ -10,8 +10,11 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 
 export const metadata: Metadata = {
-  title: 'My Personal Website',
+  title: 'Andwele Ancheta',
   description: 'Welcome to my personal website!',
+  icons: {
+    icon: '/basketball.svg',
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

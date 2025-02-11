@@ -3,6 +3,41 @@
 @tailwind utilities;
 
 :root {
-    --accent-color: #1e1727; /* Example: A blue accent color */
-    /* ... other CSS variables ... */
-  }
+    --accent-color: #1e1727;
+}
+
+body {
+    background-color: #131316;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+.title-set {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 60vh;
+}
+
+.info-set {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 150vh;
+}
+
+.fade-in {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-50%);
+    transition: all 2s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}

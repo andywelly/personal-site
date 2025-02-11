@@ -12,11 +12,11 @@ export default function Header() {
           className=""
         >
           <Image
-            src="/vercel.svg" // Path to the image in the public folder
+            src="/basketball.svg"
             alt="Vercel Logo"
-            width={50} // Initial width
-            height={50} // Initial height
-            className="rounded transform hover:scale-150 transition-transform duration-300" // Scale effect on hover
+            width={50}
+            height={50}
+            className="rounded transform hover:scale-150 transition-transform duration-300"
           />
         </Link>
 
