@@ -26,13 +26,20 @@ body {
     display: grid;
     place-items: center;
     align-content: center;
-    min-height: 150vh;
+    min-height: 100vh;
 }
 
-.fade-in {
+.fade-left {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-50%);
+    transition: all 2s;
+}
+
+.fade-right {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(50%);
     transition: all 2s;
 }
 
