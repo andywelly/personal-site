@@ -25,7 +25,7 @@ export default function Header() {
           <li>
             <Link
               href="/"
-              className="text-white hover:bg-[var(--accent-color)] hover:border-2 hover:border-white px-6 py-2 rounded transition-all duration-300"
+              className="text-white hover:bg-[var(--accent-color)] hover:border-4 border-dashed hover:border-white px-6 py-2 rounded transition-all duration-300"
             >
               Home
             </Link>
@@ -33,7 +33,7 @@ export default function Header() {
           <li>
             <Link
               href="/about"
-              className="text-white hover:bg-[var(--accent-color)] hover:border-2 hover:border-white px-6 py-2 rounded transition-all duration-300"
+              className="text-white hover:bg-[var(--accent-color)] hover:border-4 border-dashed hover:border-white px-6 py-2 rounded transition-all duration-300"
             >
               About
             </Link>
@@ -41,7 +41,7 @@ export default function Header() {
           <li>
             <Link
               href="/contact"
-              className="text-white hover:bg-[var(--accent-color)] hover:border-2 hover:border-white px-6 py-2 rounded transition-all duration-300"
+              className="text-white hover:bg-[var(--accent-color)] hover:border-4 border-dashed hover:border-white px-6 py-2 rounded transition-all duration-300"
             >
               Contact
             </Link>
