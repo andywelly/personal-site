@@ -4,6 +4,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ReactNode } from 'react';
 
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false;
+import Footer from '@/components/footer';
+
+
 export const metadata: Metadata = {
   title: 'My Personal Website',
   description: 'Welcome to my personal website!',
@@ -23,9 +29,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </nav>
         </header>
         <main>{children}</main>
-        <footer>
-          <p>&copy; {new Date().getFullYear()} My Personal Website. All rights reserved.</p>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
