@@ -1,14 +1,13 @@
-// app/layout.tsx
 import './globals.css';
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { ReactNode } from 'react';
 
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
-import Footer from '@/components/footer';
 
+import Header from '@/components/header';
+import Footer from '@/components/footer';
 
 export const metadata: Metadata = {
   title: 'My Personal Website',
@@ -18,17 +17,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        <header>
-          <nav>
-            <ul>
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/about">About</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
-            </ul>
-          </nav>
-        </header>
-        <main>{children}</main>
+      <body className="bg-[#1e1e1e] text-[#e0e0e0] font-inter">
+        <Header />
+        <main className="max-w-[800px] mx-auto my-8 p-4 bg-[#2a2a2a] rounded-lg shadow-lg">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
