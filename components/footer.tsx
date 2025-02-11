@@ -12,7 +12,7 @@ const Footer = () => {
         <a href="https://www.linkedin.com/in/andwele-ancheta/" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faLinkedin} size="2x" />
         </a>
-        <a href="mailto:your-email@example.com">
+        <a href="mailto:andwele.ancheta@gmail.com">
           <FontAwesomeIcon icon={faEnvelope} size="2x" />
         </a>
       </div>
