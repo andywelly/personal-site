@@ -7,8 +7,6 @@
 }
 
 body {
-    background-color: #131316;
-    color: #ffffff;
     padding: 0;
     margin: 0;
     overflow-x: hidden;
@@ -19,7 +17,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 20vh;
+    min-height: 30vh;
     gap: 50px;
 }
 
@@ -28,7 +26,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 25vh;
+    min-height: 40vh;
 
 }
 
