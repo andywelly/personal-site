@@ -1,3 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --accent-color: rgb(83, 1, 83);
+}
+
+body {
+    background-color: #131316;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+.title-set {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 20vh;
+    gap: 50px;
+}
+
+
+.info-set {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 25vh;
+
+}
+
+.fade-left {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-50%);
+    transition: all 2s;
+}
+
+.fade-right {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(50%);
+    transition: all 2s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}

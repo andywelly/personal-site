@@ -10,8 +10,11 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 
 export const metadata: Metadata = {
-  title: 'My Personal Website',
+  title: 'Andwele Ancheta',
   description: 'Welcome to my personal website!',
+  icons: {
+    icon: '/basketball.svg',
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -19,7 +22,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className="bg-[#1e1e1e] text-[#e0e0e0] font-inter">
         <Header />
-        <main className="max-w-[800px] mx-auto my-8 p-4 bg-[#2a2a2a] rounded-lg shadow-lg">
+        <main className="max-w-[800px] mx-auto my-8 p-4">
           {children}
         </main>
         <Footer />

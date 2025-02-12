@@ -12,11 +12,11 @@ export default function Header() {
           className=""
         >
           <Image
-            src="/vercel.svg" // Path to the image in the public folder
+            src="/basketball.svg"
             alt="Vercel Logo"
-            width={50} // Initial width
-            height={50} // Initial height
-            className="rounded transform hover:scale-150 transition-transform duration-300" // Scale effect on hover
+            width={50}
+            height={50}
+            className="rounded transform hover:scale-150 transition-transform duration-300"
           />
         </Link>
 
@@ -25,7 +25,7 @@ export default function Header() {
           <li>
             <Link
               href="/"
-              className="text-white hover:bg-[var(--accent-color)] hover:border-2 hover:border-white px-6 py-2 rounded transition-all duration-300"
+              className="text-white hover:bg-[var(--accent-color)] hover:border-4 border-dashed hover:border-white px-6 py-2 rounded transition-all duration-300"
             >
               Home
             </Link>
@@ -33,7 +33,7 @@ export default function Header() {
           <li>
             <Link
               href="/about"
-              className="text-white hover:bg-[var(--accent-color)] hover:border-2 hover:border-white px-6 py-2 rounded transition-all duration-300"
+              className="text-white hover:bg-[var(--accent-color)] hover:border-4 border-dashed hover:border-white px-6 py-2 rounded transition-all duration-300"
             >
               About
             </Link>
@@ -41,7 +41,7 @@ export default function Header() {
           <li>
             <Link
               href="/contact"
-              className="text-white hover:bg-[var(--accent-color)] hover:border-2 hover:border-white px-6 py-2 rounded transition-all duration-300"
+              className="text-white hover:bg-[var(--accent-color)] hover:border-4 border-dashed hover:border-white px-6 py-2 rounded transition-all duration-300"
             >
               Contact
             </Link>
