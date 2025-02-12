@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: 'Andwele Ancheta',
   description: 'Welcome to my personal website!',
   icons: {
-    icon: '/basketball.svg',
+    icon: './basketball.svg',
   },
 };
 

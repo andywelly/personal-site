@@ -13,7 +13,7 @@ export default function Header() {
         >
           <Image
             src="/basketball.svg"
-            alt="Vercel Logo"
+            alt="Basketball Home Button"
             width={50}
             height={50}
             className="rounded transform hover:scale-150 transition-transform duration-300"
