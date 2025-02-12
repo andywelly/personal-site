@@ -13,31 +13,41 @@ export default function HomePage() {
         }
       });
     }, {
-      threshold: 0.5,
+      threshold: 0.5, // Adjust as needed
     });
-  
-    const fadeInElements = document.querySelectorAll('.fade-left');
-    fadeInElements.forEach((el) => observer.observe(el));
 
-    const fadeRightElements = document.querySelectorAll('.fade-right');
-    fadeRightElements.forEach((el) => observer.observe(el));
-  
+    // Observe elements with .fade-left or .fade-right
+    const hiddenElements = document.querySelectorAll('.fade-left, .fade-right');
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    // Cleanup
     return () => {
-      fadeInElements.forEach((el) => observer.unobserve(el));
-      fadeRightElements.forEach((el) => observer.unobserve(el));
+      hiddenElements.forEach((el) => observer.unobserve(el));
     };
   }, []);
 
   return (
     <div>
-      <section className="title-set fade-left"> 
-        <h1 className="text-4xl font-bold mb-4">Hi! I&apos;m Andwele Ancheta</h1>
+      <section className="fade-left title-set purp-back"> 
+        <h1 className="text-8xl font-bold mb-4 text-left">Hi I&apos;m Andwele Ancheta
+        </h1>
+        <div>
+          <h1 className="text-4xl font-bold mb-4 text-right">Software Developer</h1>
+          <h2 className="text-xl text-right">Results-driven full-stack developer with client 
+            experience and a passion for continuous learning. Proven leadership skills
+            through volunteer and professional work and a knack for problem-solving.
+            </h2>
+          </div>
+
       </section>
       <section className="fade-right info-set">
         <h2 className="text-lg">Fullstack Developer</h2>
       </section>
-      <section className="fade-in info-set">
-        <h2 className="text-lg">Other Information</h2>
+      <section className="fade-left info-set">
+        <h2 className="text-4xl font-bold mb-4">Projects</h2>
+      </section>
+      <section>
+        
       </section>
     </div>
   );
