@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import CardFlip from '@/components/cardflip';
 
 export default function HomePage() {
   useEffect(() => {
@@ -32,22 +33,21 @@ export default function HomePage() {
         <h1 className="text-8xl font-bold mb-4 text-left">Hi I&apos;m Andwele Ancheta
         </h1>
         <div>
-          <h1 className="text-4xl font-bold mb-4 text-right">Software Developer</h1>
-          <h2 className="text-xl text-right">Results-driven full-stack developer with client 
+          <h1 className="text-4xl font-bold mb-4 text-right">Fullstack Software Developer</h1>
+          <h2 className="text-xl text-right">Results-driven fullstack developer with client 
             experience and a passion for continuous learning. Proven leadership skills
             through volunteer and professional work and a knack for problem-solving.
             </h2>
           </div>
-
       </section>
       <section className="fade-right info-set">
-        <h2 className="text-lg">Fullstack Developer</h2>
+        <CardFlip image='./card1.svg' text="First Card"/>
+        <CardFlip image='./card2.svg' text="Second Card"/>
+        <CardFlip image='./card3.svg' text="Third Card"/>
+        <CardFlip image='./card4.svg' text="Fourth Card"/>
       </section>
       <section className="fade-left info-set">
         <h2 className="text-4xl font-bold mb-4">Projects</h2>
-      </section>
-      <section>
-        
       </section>
     </div>
   );

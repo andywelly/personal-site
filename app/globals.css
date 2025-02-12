@@ -20,15 +20,16 @@ body {
     justify-content: space-between;
     align-items: center;
     min-height: 20vh;
-    gap: 20px;
+    gap: 50px;
 }
 
 
 .info-set {
-    display: grid;
-    place-items: center;
-    align-content: center;
-    min-height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 25vh;
+
 }
 
 .fade-left {

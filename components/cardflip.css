@@ -1,0 +1,53 @@
+/* Card container */
+.flip-card {
+  width: 200px; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
+  perspective: 1000px; /* Adds depth for 3D effect */
+}
+
+/* Inner card wrapper */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d; /* Enables 3D transformations */
+  transform: translateZ(0); /* Enable hardware acceleration */
+  will-change: transform; /* Optimize rendering */
+}
+
+/* Flip effect on hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and back of the card */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hides the back of the card */
+  border-radius: 10px; /* Optional: Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow */
+}
+
+/* Front of the card (image) */
+.flip-card-front {
+  background-color: #fff; /* Optional: Background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Back of the card (text) */
+.flip-card-back {
+  background-color: #333; /* Optional: Background color */
+  color: white; /* Optional: Text color */
+  transform: rotateY(180deg); /* Initially hidden */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Optional: Adds padding to the text */
+}
