@@ -12,7 +12,7 @@ export default function Header() {
           className=""
         >
           <Image
-            src="/basketball.svg"
+            src="./basketball.svg"
             alt="Basketball Home Button"
             width={50}
             height={50}
