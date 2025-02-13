@@ -1,16 +1,24 @@
+import Image from 'next/image';
 import "./cardflip.css";
 
 interface CardFlipProps {
-  image: string; // Path to the image
-  text: string;  // Text to display on the back
+  image: string;
+  text: string;
+  width?: number;
+  height?: number; // Optional height for the image
 }
 
-export default function CardFlip({ image, text }: CardFlipProps) {
+export default function CardFlip({ image, text, width = 300, height = 200 }: CardFlipProps) {  // Default width and height
   return (
     <div className="flip-card">
       <div className="flip-card-inner">
         <div className="flip-card-front">
-          <img src={image} alt="Card" />
+          <Image 
+            src={image} 
+            alt="Card" 
+            width={width} 
+            height={height}
+          />
         </div>
         <div className="flip-card-back">
           <p>{text}</p>
