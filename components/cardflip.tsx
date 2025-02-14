@@ -1,22 +1,29 @@
+import { useState } from 'react';
 import Image from 'next/image';
-import "./cardflip.css";
+import './cardflip.css';
 
 interface CardFlipProps {
   image: string;
   text: string;
   width?: number;
-  height?: number; // Optional height for the image
+  height?: number; 
 }
 
-export default function CardFlip({ image, text, width = 300, height = 200 }: CardFlipProps) {  // Default width and height
+export default function CardFlip({ image, text, width = 300, height = 200 }: CardFlipProps) {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleFlip = () => {
+    setIsFlipped(!isFlipped);
+  };
+
   return (
-    <div className="flip-card">
-      <div className="flip-card-inner">
+    <div className="flip-card" onClick={handleFlip}>
+      <div className={`flip-card-inner ${isFlipped ? 'flipped' : ''}`}>
         <div className="flip-card-front">
-          <Image 
-            src={image} 
-            alt="Card" 
-            width={width} 
+          <Image
+            src={image}
+            alt="Card"
+            width={width}
             height={height}
           />
         </div>
