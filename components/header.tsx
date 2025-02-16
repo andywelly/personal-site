@@ -4,9 +4,7 @@ import Image from 'next/image';
 export default function Header() {
   return (
     <header className="p-4">
-      {/* Navigation */}
       <nav className="relative z-10 p-10 flex items-center justify-between">
-        {/* Logo or Image on the Left */}
         <Link
           href="/"
           className=""
@@ -20,7 +18,6 @@ export default function Header() {
           />
         </Link>
 
-        {/* Navigation Links on the Right */}
         <ul className="flex justify-end gap-4">
           <li>
             <Link
