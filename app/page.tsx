@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import CardFlip from '@/components/cardflip';
+import ProjectCard from '@/components/projectcard';
 
 export default function HomePage() {
   useEffect(() => {
@@ -49,6 +50,7 @@ export default function HomePage() {
       <section className="fade-left info-set">
         <h2 className="text-4xl font-bold mb-4">Projects</h2>
       </section>
+      <ProjectCard/>
     </div>
   );
 }
