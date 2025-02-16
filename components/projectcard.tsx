@@ -1,7 +1,7 @@
 export default function ProjectCard() {
     return (
-        <div>
-            
+        <div className="project-card">
+
         </div>
     )
 
