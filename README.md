@@ -3,3 +3,5 @@ Welcome to my personal website! This project showcases my portfolio, skills, and
 
 ## Live Demo
 Check out the live version of the site: https://andywelly.github.io/personal-site/
+
+## Technologies
