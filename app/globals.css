@@ -18,6 +18,7 @@ body {
     justify-content: space-between;
     align-items: center;
     min-height: 30vh;
+    padding-bottom: 75px;
     gap: 50px;
 }
 
@@ -26,7 +27,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 40vh;
 
 }
 
