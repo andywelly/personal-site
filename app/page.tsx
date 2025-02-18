@@ -50,7 +50,9 @@ export default function HomePage() {
       <section className="fade-left info-set">
         <h2 className="text-4xl font-bold mb-4">Projects</h2>
       </section>
-      <ProjectCard/>
+      <section className="fade-left info-set">
+       <ProjectCard/>
+      </section>
     </div>
   );
 }
