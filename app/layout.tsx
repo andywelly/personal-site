@@ -26,7 +26,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <main className="mx-auto my-8 p-4 relative">
           {children}
         </main>
-        <Footer />
+        <div className='relateive z-10'>
+         <Footer/>
+        </div>
       </body>
     </html>
   );
