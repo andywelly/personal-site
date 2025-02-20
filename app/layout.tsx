@@ -20,9 +20,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-[#1e1e1e] text-[#e0e0e0] font-inter">
+      <body className="bg-[#f0f0f0] text-[#e0e0e0] font-inter">
+        <div className="fixed top-0 left-0 w-full h-full bg-[url('/background.jpg')] bg-cover bg-center bg-no-repeat backdrop-filter:blur(5px)"></div>
         <Header />
-        <main className="max-w-[800px] mx-auto my-8 p-4">
+        <main className="mx-auto my-8 p-4 relative">
           {children}
         </main>
         <Footer />

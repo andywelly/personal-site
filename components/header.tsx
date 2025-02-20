@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function Header() {
   return (
     <header className="p-4">
-      <nav className="relative z-10 p-10 flex items-center justify-between">
+      <nav className="relative z-10 p-5 flex items-center justify-between">
         <Link
           href="/"
           className=""

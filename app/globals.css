@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-    --accent-color: rgb(83, 1, 83);
+    --accent-color: #003a41;
     --langwarrin-color: rgb(0, 67, 1);
-    --pacman-color: rgb(12, 4, 118);
+    --pacman-color: #0c0476;
     --catan-color: rgb(89, 199, 233);
 }
 
@@ -18,13 +18,14 @@ body {
 
 .title-set {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; 
     align-items: center;
     min-height: 30vh;
-    padding-bottom: 75px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
     gap: 50px;
 }
-
 
 .info-set {
     display: flex;
@@ -50,7 +51,7 @@ body {
 .fade-in {
     opacity: 0;
     filter: blur(5px);
-    transition: all 1.5s;
+    transition: all 2s;
 }
 
 .show {

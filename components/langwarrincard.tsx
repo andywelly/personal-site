@@ -14,7 +14,7 @@ export default function LangwarrinPage() {
   ];
 
   return (
-    <div className="bg-[#1e1e1e] text-[#e0e0e0] font-inter flex flex-col items-center justify-center">
+    <div className=" text-[#e0e0e0] font-inter flex flex-col items-center justify-center">
       <h2 className="text-5xl font-bold mb-4 pb-8">Projects</h2>
       <div className="w-full mx-auto">
         <h1 className="text-3xl font-bold text-center mb-8">Langwarrin Community Centre</h1>
