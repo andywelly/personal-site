@@ -30,7 +30,7 @@ export default function HomePage() {
   
   return (
     <div>
-      <div className="w-full fade-in bg-[rgba(5,101,112,0.75)]">
+      <div className="w-full fade-in bg-[rgba(5,101,112,0.50)]">
       <section className="max-w-[800px] mx-auto fade-left title-set flex-col md:flex-row"> 
         <h1 className="text-8xl font-bold mb-4 text-left mx-auto">Hi I&apos;m Andwele Ancheta
         </h1>
