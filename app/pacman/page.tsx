@@ -1,5 +1,5 @@
 
-export default function LangwarrinPage() {
+export default function PacmanPage() {
     return (
       <section>
         <h1>Pacman</h1>

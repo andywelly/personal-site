@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function PacmanCard() {
   return (
-    <div className="bg-[#1e1e1e] text-[#e0e0e0] font-inter flex flex-col items-center justify-center">
+    <div className="text-[#e0e0e0] font-inter flex flex-col items-center justify-center">
       <div className="w-full mx-auto">
         <h1 className="text-3xl font-bold text-center mb-8">Pac-Man</h1>
 

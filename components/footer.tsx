@@ -15,7 +15,7 @@ export default function Footer() {
 
   return (
     <footer className="footer">
-      <div className="social-links flex justify-center gap-4">
+      <div className="social-links flex justify-center gap-4 relative z-10">
         <a href="https://github.com/andywelly" target="_blank" rel="noopener noreferrer">
           <GitHubIcon fontSize="large" />
         </a>
@@ -26,7 +26,7 @@ export default function Footer() {
           <EmailIcon fontSize="large" />
         </a>
       </div>
-      <p className="flex justify-center gap-4 py-5">
+      <p className="flex justify-center gap-4 py-5 relative z-10">
         &copy; {year} Andwele Ancheta. All rights reserved.
       </p>
     </footer>
