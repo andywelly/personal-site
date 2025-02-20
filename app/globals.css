@@ -4,6 +4,7 @@
 
 :root {
     --accent-color: rgb(83, 1, 83);
+    --langwarrin-color: rgb(1, 96, 2);
 }
 
 body {
@@ -27,6 +28,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 75px;
 
 }
 
@@ -46,7 +48,7 @@ body {
 .fade-in {
     opacity: 0;
     filter: blur(5px);
-    transition: all 2s;
+    transition: all 1.5s;
 }
 
 .show {
