@@ -50,7 +50,7 @@ export default function LangwarrinPage() {
               </div>
               <div className='text-center mt-4'>
                   <Link
-                    href="/contact"
+                    href="/langwarrin"
                   className="text-white hover:bg-[var(--langwarrin-color)] hover:border-4 border-dashed hover:border-white px-6 py-2 rounded transition-all duration-300"
                   >
                     Read More

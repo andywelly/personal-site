@@ -3,7 +3,6 @@
 import { useEffect } from 'react';
 import CardFlip from '@/components/cardflip';
 import LangwarrinPage from '@/components/langwarrincard';
-import SokobanPage from '@/components/sokobancard';
 
 export default function HomePage() {
   useEffect(() => {
@@ -53,6 +52,8 @@ export default function HomePage() {
       </section>
       <section className="fade-in info-set">
        <LangwarrinPage/>
+      </section>
+      <section className='fade-right info-set'>
       </section>
     </div>
   );
