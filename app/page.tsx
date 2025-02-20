@@ -54,7 +54,7 @@ export default function HomePage() {
       <section className="fade-in info-set">
        <LangwarrinPage/>
       </section>
-      <section className='fade-right info-set'>
+      <section className='fade-in info-set'>
         <PacmanCard/>
       </section>
     </div>
