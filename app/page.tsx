@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import CardFlip from '@/components/cardflip';
 import LangwarrinPage from '@/components/langwarrincard';
 import PacmanCard from '@/components/pacmancard';
+import CatanPage from '@/components/catancard';
 
 export default function HomePage() {
   useEffect(() => {
@@ -29,6 +30,7 @@ export default function HomePage() {
 
   return (
     <div>
+      <div className="">
       <section className="fade-left title-set flex-col md:flex-row"> 
         <h1 className="text-8xl font-bold mb-4 text-left mx-auto">Hi I&apos;m Andwele Ancheta
         </h1>
@@ -39,7 +41,8 @@ export default function HomePage() {
             through volunteer and professional work and a knack for problem-solving.
             </h2>
           </div>
-      </section>
+        </section>
+      </div>
       <section>
         <h3 className='text-xl font-bold mb-4 text-left mx-auto fade-right'>
           Some Fun Facts About Me:
@@ -53,6 +56,9 @@ export default function HomePage() {
       </section>
       <section className="fade-in info-set">
        <LangwarrinPage/>
+      </section>
+      <section className='fade-in info-set'>
+        <CatanPage/>
       </section>
       <section className='fade-in info-set'>
         <PacmanCard/>
