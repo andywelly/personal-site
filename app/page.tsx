@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import CardFlip from '@/components/cardflip';
 import LangwarrinPage from '@/components/langwarrincard';
+import PacmanCard from '@/components/pacmancard';
 
 export default function HomePage() {
   useEffect(() => {
@@ -54,6 +55,7 @@ export default function HomePage() {
        <LangwarrinPage/>
       </section>
       <section className='fade-right info-set'>
+        <PacmanCard/>
       </section>
     </div>
   );
