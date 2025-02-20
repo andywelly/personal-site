@@ -1,9 +1,18 @@
-import React from 'react';
+"use client"; // Add this line at the top
+
+import React, { useEffect, useState } from 'react';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 
 export default function Footer() {
+  const [year, setYear] = useState<number | null>(null);
+
+  // Use useEffect to set the year on the client side
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="footer">
       <div className="social-links flex justify-center gap-4">
@@ -17,7 +26,9 @@ export default function Footer() {
           <EmailIcon fontSize="large" />
         </a>
       </div>
-      <p className="flex justify-center gap-4 py-5">&copy; {new Date().getFullYear()} Andwele Ancheta. All rights reserved.</p>
+      <p className="flex justify-center gap-4 py-5">
+        &copy; {year} Andwele Ancheta. All rights reserved.
+      </p>
     </footer>
   );
 }

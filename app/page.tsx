@@ -47,10 +47,9 @@ export default function HomePage() {
         <CardFlip image='./card3.svg' text="Third Card"/>
         <CardFlip image='./card4.svg' text="Fourth Card"/>
       </section>
-      <section className="fade-left info-set">
-        <h2 className="text-4xl font-bold mb-4">Projects</h2>
+      <section className="fade-in info-set">
+       <ProjectCard/>
       </section>
-      <ProjectCard/>
     </div>
   );
 }
