@@ -81,7 +81,7 @@ export default function ContactForm() {
   return (
     <div className='w-full bg-[rgba(5,101,112,0.50)]'>
       <div className='max-w-[800px] mx-auto'>
-        <h2 className="text-5xl font-bold text-center mb-4 pt-2">Contact Me</h2>
+        <h2 className="text-5xl font-bold text-center mb-4 pt-4">Contact Me</h2>
         <div className="mx-auto p-6 rounded-lg">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
