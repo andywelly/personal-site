@@ -41,36 +41,42 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_USER_ID);
-
-      const templateParams = {
-        name: formData.name,
-        email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-        reply_to: formData.email,
-      };
-
-      const response = await emailjs.send(
-        "service_1htcbf5", // Your EmailJS Service ID
-        "template_foaj1oc", // Your EmailJS Template ID
-        templateParams
-      );
-
-      if (response.status === 200) {
-        setSubmitMessage('Thank you! Your message has been sent.');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        setSubmitMessage('Something went wrong. Please try again.');
-        console.error("EmailJS Error:", response);
+        if (process.env.NEXT_PUBLIC_EMAILJS_USER_ID) {
+          emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_USER_ID);
+  
+          const templateParams = {
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+            reply_to: formData.email,
+          };
+  
+          const response = await emailjs.send(
+            "service_1htcbf5",
+            "template_foaj1oc",
+            templateParams
+          );
+  
+          if (response.status === 200) {
+            setSubmitMessage('Thank you! Your message has been sent.');
+            setFormData({ name: '', email: '', subject: '', message: '' });
+          } else {
+            setSubmitMessage('Something went wrong. Please try again.');
+            console.error("EmailJS Error:", response);
+          }
+        } else {
+          console.error("Error: NEXT_PUBLIC_EMAILJS_USER_ID is not set.");
+          setSubmitMessage("Error: Contact form is temporarily unavailable."); 
+          return; 
+        }
+      } catch (error) {
+        console.error("EmailJS Error:", error);
+        setSubmitMessage('An error occurred. Please try again.');
+      } finally {
+        setIsSubmitting(false);
       }
-    } catch (error) {
-      console.error("EmailJS Error:", error);
-      setSubmitMessage('An error occurred. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+    };
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md">
