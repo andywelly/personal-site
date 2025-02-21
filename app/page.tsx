@@ -43,7 +43,7 @@ export default function HomePage() {
           </div>
         </section>
       </div>
-      <div className='max-w-[800px] mx-auto '>
+      <div className='max-w-[800px] mx-auto'>
         <section>
           <h3 className='text-xl font-bold mb-4 text-left mx-auto fade-right'>
             Some Fun Facts About Me:
