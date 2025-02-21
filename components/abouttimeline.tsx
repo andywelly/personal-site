@@ -140,7 +140,7 @@ export default function AboutPage() {
             </TimelineSeparator>
             <TimelineContent>
               <div className="p-4">
-                <h2 className="text-2xl font-bold">Software Development Client Project</h2>
+                <h2 className="text-2xl font-bold">Software Development Client Work</h2>
                 <p className="text-gray-400 font-bold py-2">Langwarrin Community Centre | Jul 2024 – Nov 2024</p>
                 <p>
                     Led a team of 5 to successfully deliver a user-friendly full-stack web application (ReactJS, CSS, PostgreSQL, Strapi) 

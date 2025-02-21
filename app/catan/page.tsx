@@ -1,7 +1,10 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SiJavascript, SiHtml5, SiCss3, SiJquery } from 'react-icons/si'; // Import icons
+import { useRouter } from 'next/navigation';
 
 export default function CatanPage() {
   const technologies = [
@@ -10,7 +13,12 @@ export default function CatanPage() {
     { name: 'CSS', icon: <SiCss3 size={50} />, link: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
     { name: 'jQuery', icon: <SiJquery size={50} />, link: 'https://jquery.com/' },
   ];
+  const router = useRouter();
 
+  const handleGoBack = () => {
+    router.back();
+  };
+  
   return (
     <div className="max-w-[1200px] mx-auto text-[#e0e0e0] font-inter flex flex-col items-center justify-center">
       <div className="w-full mx-auto">
@@ -33,13 +41,14 @@ export default function CatanPage() {
               height={400}
               className="w-full h-auto rounded-lg"
             />
-            <div className="flex flex-wrap gap-4 justify-center pt-4"> 
-              {technologies.map((tech) => (
-                <a key={tech.name} href={tech.link} target="_blank" rel="noopener noreferrer" title={tech.name}>
-                  {tech.icon}
-                </a>
-              ))}
-            </div>
+            <div className="text-center mt-8">
+          <button
+            onClick={handleGoBack}
+            className="text-white outline-double hover:bg-[var(--catan-color)] hover:border-4 border-dashed hover:border-white px-6 py-2 rounded transition-all duration-300"
+          >
+            Go Back
+          </button>
+        </div>
           </div>
 
           {/* Right Column: Text */}
@@ -60,6 +69,13 @@ export default function CatanPage() {
               Beyond the immediate enjoyment it brought to our game nights, it reinforced my problem-solving abilities and demonstrated 
               the power of code to create practical tools for everyday use. <br/><br/>
               </p>
+            </div>
+            <div className="flex flex-wrap gap-4 justify-center pt-4"> 
+              {technologies.map((tech) => (
+                <a key={tech.name} href={tech.link} target="_blank" rel="noopener noreferrer" title={tech.name}>
+                  {tech.icon}
+                </a>
+              ))}
             </div>
           </div>
         </div>

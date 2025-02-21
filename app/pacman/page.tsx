@@ -1,15 +1,22 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function PacmanPage() {
+     const router = useRouter();
+    
+      const handleGoBack = () => {
+        router.back();
+      };
   return (
     <div className="max-w-[1200px] mx-auto text-[#e0e0e0] font-inter flex flex-col items-center justify-center">
       <div className="w-full mx-auto">
         <h1 className="text-5xl font-bold text-center mb-8">Pac-Man</h1>
         <div className='text-center mt-4 pb-6'>
           <Link
-            href="https://github.com/your-username/pacman-game" // Replace with your GitHub repo link
+            href="https://github.com/andywelly/Pacman" // Replace with your GitHub repo link
             className="text-xl outline-double hover:bg-[var(--pacman-color)] hover:border-4 border-dashed hover:border-white px-6 py-2 rounded transition-all duration-300"
           >
             Visit GitHub Repo
@@ -25,23 +32,13 @@ export default function PacmanPage() {
               height={400}
               className="w-full h-auto rounded-lg"
             />
-            <div className="flex flex-wrap gap-4 justify-center pt-4"> 
-              <a href="https://www.java.com/en/" target="_blank" rel="noopener noreferrer" title="Java">
-                <Image
-                  src="/java.svg" 
-                  alt="Java Logo"
-                  width={50}
-                  height={50}
-                />
-              </a>
-              <a href="https://www.lwjgl.org/" target="_blank" rel="noopener noreferrer" title="LWJGL">
-                <Image
-                  src="/lwjgl.svg" 
-                  alt="LWJGL Logo"
-                  width={50}
-                  height={50}
-                />
-              </a>
+            <div className="text-center mt-8">
+              <button
+                  onClick={handleGoBack}
+                  className="text-white outline-double hover:bg-[var(--pacman-color)] hover:border-4 border-dashed hover:border-white px-6 py-2 rounded transition-all duration-300"
+                >
+                  Go Back
+              </button>
             </div>
           </div>
 
@@ -62,7 +59,24 @@ export default function PacmanPage() {
               object-oriented software development principles and the software development life cycle. <br/>
               </p>
             </div>
-            
+            <div className="flex flex-wrap gap-4 justify-center pt-4"> 
+              <a href="https://www.java.com/en/" target="_blank" rel="noopener noreferrer" title="Java">
+                <Image
+                  src="/java.svg" 
+                  alt="Java Logo"
+                  width={50}
+                  height={50}
+                />
+              </a>
+              <a href="https://www.lwjgl.org/" target="_blank" rel="noopener noreferrer" title="LWJGL">
+                <Image
+                  src="/lwjgl.svg" 
+                  alt="LWJGL Logo"
+                  width={50}
+                  height={50}
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>
