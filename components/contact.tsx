@@ -81,7 +81,7 @@ export default function ContactForm() {
   return (
     <div className='w-full bg-[rgba(5,101,112,0.50)]'>
       <div className='max-w-[800px] mx-auto'>
-        <h2 className="text-5xl font-bold text-center mb-4 pb-2">Contact Me</h2>
+        <h2 className="text-5xl font-bold text-center mb-4 pt-2">Contact Me</h2>
         <div className="mx-auto p-6 rounded-lg">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
@@ -141,13 +141,14 @@ export default function ContactForm() {
             </div>
 
             <div>
-              <button 
-                type="submit" 
-                disabled={isSubmitting} 
-                className="w-full px-4 py-2 bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              >
+            <button
+                type="submit"
+                disabled={isSubmitting}
+                className="text-white hover:bg-[var(--contact-color)] hover:border-4 border-dashed hover:border-white px-6 py-2 rounded transition-all duration-300 w-full" // Added w-full
+                >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
-              </button>
+            </button>
+
             </div>
 
             {submitMessage && <p className="mt-4 text-center text-sm text-green-900">{submitMessage}</p>}
