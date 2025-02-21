@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {SiJavascript, SiHtml5, SiCss3, SiJquery} from 'react-icons/si'; // Import icons
 
-export default function CatanPage() {
+export default function CatanCard() {
   const technologies = [
     { name: 'JavaScript', icon: <SiJavascript size={50} />, link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
     { name: 'HTML5', icon: <SiHtml5 size={50} />, link: 'https://developer.mozilla.org/en-US/docs/Glossary/HTML5' },

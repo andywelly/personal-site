@@ -1,8 +1,9 @@
+import PacmanCard from "@/components/pacmancard";
 
 export default function PacmanPage() {
     return (
       <section>
-        <h1>Pacman</h1>
+        <PacmanCard/>
       </section>
     );
   }

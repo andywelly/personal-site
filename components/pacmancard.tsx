@@ -12,7 +12,7 @@ export default function PacmanCard() {
           {/* Left Column: Image */}
           <div className="w-1/2">
             <Image
-              src="./pacman.svg"
+              src="/pacman.png"
               alt="Pacman Game Demo"
               width={600}
               height={400}
