@@ -27,6 +27,7 @@ export default function ContactPage() {
     }, []);
   return (
     <div className='fade-in'>
+      <h2 className="text-5xl font-bold text-center mb-4 pt-4">Contact Me</h2>
       <ContactForm />
     </div>
   );
