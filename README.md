@@ -4,6 +4,11 @@ Welcome to my personal website! This project showcases my portfolio, skills, and
 ## Live Demo
 Check out the live version of the site: https://andywelly.github.io/personal-site/
 
+## Screenshots
+
+<img width="1507" alt="image" src="https://github.com/user-attachments/assets/6d6f85cb-59c4-4ac5-8cbb-f48a9534ce56" />
+
+
 ## Technologies
 
 This website is built using the following technologies:
