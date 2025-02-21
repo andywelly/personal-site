@@ -1,10 +1,9 @@
-
+import ContactForm from '@/components/contact';
 
 export default function ContactPage() {
-    return (
-      <section>
-        <h1>Contact Me</h1>
-      </section>
-    );
-  }
-  
+  return (
+    <div className="min-h-screen py-12">
+      <ContactForm />
+    </div>
+  );
+}
