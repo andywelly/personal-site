@@ -9,7 +9,7 @@ import {
   TimelineContent,
   TimelineDot,
 } from '@mui/lab';
-import { School, Work, VolunteerActivism, CardMembership, Star } from '@mui/icons-material';
+import { School, Work, VolunteerActivism, CardMembership } from '@mui/icons-material';
 import Image from 'next/image';
 
 export default function AboutPage() {
