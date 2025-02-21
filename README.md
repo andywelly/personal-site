@@ -2,7 +2,7 @@
 Welcome to my personal website! This project showcases my portfolio, skills, and projects as a Fullstack Developer. Built with Next.js, Tailwind CSS, and modern web development practices, this site is designed to be fast, responsive, and visually appealing.
 
 ## Live Demo
-[Check out the live version of my site](https://main.dc4d3oi2yku9t.amplifyapp.com/)
+[Check out the live version of my site](https://www.andweleancheta.click/)
 
 ## Screenshots
 
