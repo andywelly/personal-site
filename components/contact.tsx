@@ -79,43 +79,81 @@ export default function ContactForm() {
     };
 
   return (
-    <div className='max-w-[800px] mx-auto'>
-        <h2 className="text-5xl font-bold text-center mb-4 pb-8">Contact Me</h2>
-        <div className="mx-auto p-6 bg-white rounded-lg shadow-md">
-        <form onSubmit={handleSubmit} className="space-y-4">
+    <div className='w-full bg-[rgba(5,101,112,0.50)]'>
+      <div className='max-w-[800px] mx-auto'>
+        <h2 className="text-5xl font-bold text-center mb-4 pb-2">Contact Me</h2>
+        <div className="mx-auto p-6 rounded-lg">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-            <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className={`mt-1 block w-full px-4 py-2 border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500`} required /> {/* Added required */}
-            {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+              <label htmlFor="name" className="block text-sm font-medium">Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                value={formData.name} 
+                onChange={handleChange} 
+                className={`mt-1 block w-full px-4 py-2 border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-black`} // Added text-black
+                required 
+              />
+              {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
             </div>
 
             <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-            <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className={`mt-1 block w-full px-4 py-2 border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500`} required /> {/* Added required */}
-            {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+              <label htmlFor="email" className="block text-sm font-medium">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                value={formData.email} 
+                onChange={handleChange} 
+                className={`mt-1 block w-full px-4 py-2 border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-black`} // Added text-black
+                required 
+              />
+              {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
             </div>
 
             <div>
-            <label htmlFor="subject" className="block text-sm font-medium text-gray-700">Subject</label>
-            <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} className={`mt-1 block w-full px-4 py-2 border ${errors.subject ? 'border-red-500' : 'border-gray-300'} rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500`} required /> {/* Added required */}
-            {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject}</p>}
+              <label htmlFor="subject" className="block text-sm font-medium">Subject</label>
+              <input 
+                type="text" 
+                id="subject" 
+                name="subject" 
+                value={formData.subject} 
+                onChange={handleChange} 
+                className={`mt-1 block w-full px-4 py-2 border ${errors.subject ? 'border-red-500' : 'border-gray-300'} rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-black`} // Added text-black
+                required 
+              />
+              {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject}</p>}
             </div>
 
             <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-            <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows={4} className={`mt-1 block w-full px-4 py-2 border ${errors.message ? 'border-red-500' : 'border-gray-300'} rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500`} required /> {/* Added required */}
-            {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+              <label htmlFor="message" className="block text-sm font-medium">Message</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                value={formData.message} 
+                onChange={handleChange} 
+                rows={4} 
+                className={`mt-1 block w-full px-4 py-2 border ${errors.message ? 'border-red-500' : 'border-gray-300'} rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-black`} // Added text-black
+                required 
+              />
+              {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
             </div>
 
             <div>
-            <button type="submit" disabled={isSubmitting} className="w-full px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              <button 
+                type="submit" 
+                disabled={isSubmitting} 
+                className="w-full px-4 py-2 bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
-            </button>
+              </button>
             </div>
 
-            {submitMessage && <p className="mt-4 text-center text-sm text-green-600">{submitMessage}</p>}
-        </form>
+            {submitMessage && <p className="mt-4 text-center text-sm text-green-900">{submitMessage}</p>}
+          </form>
         </div>
+      </div>
     </div>
   );
 }
