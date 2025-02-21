@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { SiReact, SiJavascript, SiHtml5, SiCss3, SiStrapi, SiPostgresql} from 'react-icons/si'; // Import icons
 
-export default function LangwarrinPage() {
+export default function LangwarrinCard() {
   const technologies = [
     { name: 'React', icon: <SiReact size={50} />, link: 'https://reactjs.org/' },
     { name: 'JavaScript', icon: <SiJavascript size={50} />, link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
@@ -15,7 +15,6 @@ export default function LangwarrinPage() {
 
   return (
     <div className=" text-[#e0e0e0] font-inter flex flex-col items-center justify-center">
-      <h2 className="text-5xl font-bold mb-4 pb-8">Projects</h2>
       <div className="w-full mx-auto">
         <h1 className="text-3xl font-bold text-center mb-8">Langwarrin Community Centre</h1>
 

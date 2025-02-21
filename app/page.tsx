@@ -2,9 +2,9 @@
 
 import { useEffect } from 'react';
 import CardFlip from '@/components/cardflip';
-import LangwarrinPage from '@/components/langwarrincard';
+import LangwarrinCard from '@/components/langwarrincard';
 import PacmanCard from '@/components/pacmancard';
-import CatanPage from '@/components/catancard';
+import CatanCard from '@/components/catancard';
 
 export default function HomePage() {
   useEffect(() => {
@@ -43,7 +43,7 @@ export default function HomePage() {
           </div>
         </section>
       </div>
-      <div className='max-w-[800px] mx-auto '>
+      <div className='max-w-[800px] mx-auto'>
         <section>
           <h3 className='text-xl font-bold mb-4 text-left mx-auto fade-right'>
             Some Fun Facts About Me:
@@ -55,11 +55,12 @@ export default function HomePage() {
           <CardFlip image='./card3.svg' text="Third Card"/>
           <CardFlip image='./card4.svg' text="Fourth Card"/>
         </section>
+        <h2 className="text-5xl font-bold mb-4 pb-8 text-center">Projects</h2>
         <section className="fade-in info-set">
-        <LangwarrinPage/>
+        <LangwarrinCard/>
         </section>
         <section className='fade-in info-set'>
-          <CatanPage/>
+          <CatanCard/>
         </section>
         <section className='fade-in info-set'>
           <PacmanCard/>
