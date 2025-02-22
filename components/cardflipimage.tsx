@@ -2,14 +2,14 @@ import { useState } from 'react';
 import Image from 'next/image';
 import './cardflip.css';
 
-interface CardFlipProps {
+interface CardFlipImageProps {
   image: string;
-  text: string;
+  imagelink: string;
   width?: number;
-  height?: number;
+  height?: number; 
 }
 
-export default function CardFlip({ image, text, width = 300, height = 200 }: CardFlipProps) {
+export default function CardFlipImage({ image, imagelink, width = 300, height = 200 }: CardFlipImageProps) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleFlip = () => {
@@ -17,7 +17,7 @@ export default function CardFlip({ image, text, width = 300, height = 200 }: Car
   };
 
   return (
-    <div className="flip-card outline-white" onClick={handleFlip}>
+    <div className="flip-card" onClick={handleFlip}>
       <div className={`flip-card-inner ${isFlipped ? 'flipped' : ''}`}>
         <div className="flip-card-front">
           <Image
@@ -28,7 +28,16 @@ export default function CardFlip({ image, text, width = 300, height = 200 }: Car
           />
         </div>
         <div className="flip-card-back">
-          <p>{text}</p>
+          <Image
+            src={imagelink}
+            alt="Flipped Image"
+            width={width}
+            height={height}
+            style={{
+                objectFit: 'cover', // Ensure the image covers the card
+                borderRadius: '15px', // Rounded edges
+              }}
+          />
         </div>
       </div>
     </div>
