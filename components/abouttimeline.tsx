@@ -9,7 +9,7 @@ import {
   TimelineContent,
   TimelineDot,
 } from '@mui/lab';
-import { School, Work, VolunteerActivism, CardMembership } from '@mui/icons-material';
+import { School, Work, VolunteerActivism, CardMembership, Computer } from '@mui/icons-material';
 import Image from 'next/image';
 
 export default function AboutPage() {
@@ -38,7 +38,7 @@ export default function AboutPage() {
     <div>
       {/* Header Section */}
       <div className="w-full fade-in bg-[rgba(5,101,112,0.50)]">
-        <section className="max-w-[800px] mx-auto fade-left title-set flex-col md:flex-row py-12">
+        <section className="max-w-[800px] mx-auto fade-in title-set flex-col md:flex-row py-12">
           {/* Left Column */}
           <div className="w-full md:w-1/2">
             <h1 className="text-5xl font-bold mb-4 text-left">About Me</h1>
@@ -88,24 +88,23 @@ export default function AboutPage() {
             </TimelineContent>
           </TimelineItem>
 
-          {/* Grocery Fill Lead at Coles Group */}
+                  {/* Software Development Volunteer at Langwarrin Community Centre */}
           <TimelineItem className='fade-left'>
             <TimelineSeparator>
-              <TimelineDot color="secondary">
-                <Work />
+              <TimelineDot color="info">
+                <Computer/>
               </TimelineDot>
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent>
               <div className="p-4">
-                <h2 className="text-2xl font-bold">Grocery Fill Lead</h2>
-                <p className="text-gray-400 font-bold py-2">Coles Group | Jan 2022 – Present</p>
+                <h2 className="text-2xl font-bold">Software Development Client Project</h2>
+                <p className="text-gray-400 font-bold py-2">Langwarrin Community Centre | Jul 2024 – Nov 2024</p>
                 <p>
-                  Developed strong leadership, problem-solving, and organisational skills through coordinating team activities, 
-                  managing stock levels, and communicating with suppliers.
-                  Successfully trained new employees and resolved logistical issues, contributing to improved operational efficiency and reduced errors.
+                    Led a team of 5 to successfully deliver a user-friendly full-stack web application (ReactJS, CSS, PostgreSQL, Strapi) 
+                    to clients.  Focused on seamless data integration (RESTful APIs) and efficient deployments (CI/CD pipelines), 
+                    while promoting effective teamwork using Git, Jira, and Confluence.
                 </p>
-
               </div>
             </TimelineContent>
           </TimelineItem>
@@ -130,23 +129,25 @@ export default function AboutPage() {
             </TimelineContent>
           </TimelineItem>
 
-          {/* Software Development Volunteer at Langwarrin Community Centre */}
+
+          {/* Grocery Fill Lead at Coles Group */}
           <TimelineItem className='fade-left'>
             <TimelineSeparator>
-              <TimelineDot color="info">
-                <VolunteerActivism />
+              <TimelineDot color="secondary">
+                <Work />
               </TimelineDot>
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent>
               <div className="p-4">
-                <h2 className="text-2xl font-bold">Software Development Client Project</h2>
-                <p className="text-gray-400 font-bold py-2">Langwarrin Community Centre | Jul 2024 – Nov 2024</p>
+                <h2 className="text-2xl font-bold">Grocery Fill Lead</h2>
+                <p className="text-gray-400 font-bold py-2">Coles Group | Jan 2022 – Present</p>
                 <p>
-                    Led a team of 5 to successfully deliver a user-friendly full-stack web application (ReactJS, CSS, PostgreSQL, Strapi) 
-                    to clients.  Focused on seamless data integration (RESTful APIs) and efficient deployments (CI/CD pipelines), 
-                    while promoting effective teamwork using Git, Jira, and Confluence.
+                  Developed strong leadership, problem-solving, and organisational skills through coordinating team activities, 
+                  managing stock levels, and communicating with suppliers.
+                  Successfully trained new employees and resolved logistical issues, contributing to improved operational efficiency and reduced errors.
                 </p>
+
               </div>
             </TimelineContent>
           </TimelineItem>
@@ -164,9 +165,9 @@ export default function AboutPage() {
                 <ul className='py-2'>
                     <li className='py-1'>AWS Certified Cloud Practitioner (Issued Feb 2024)</li>
                     <li className='py-1'>Google Foundations of Cybersecurity  (Issued Jan 2025)</li>
-                    <li className='py-1'>Pursuing ISC2 Certified in Cybersecurity (CC)  </li>
                     <li className='py-1'>INFO30006 Exemplar for Research on AI-Generated Content</li>
                     <li className='py-1'>Outstanding Leadership and Team Collaboration Award, Coles Group</li>
+                    <li className='py-1'>Pursuing ISC2 Certified in Cybersecurity (CC)  </li>
                 </ul>
               </div>
             </TimelineContent>
