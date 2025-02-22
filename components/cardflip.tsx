@@ -17,7 +17,7 @@ export default function CardFlip({ image, text, width = 300, height = 200 }: Car
   };
 
   return (
-    <div className="flip-card outline-white" onClick={handleFlip}>
+    <div className="flip-card" onClick={handleFlip}>
       <div className={`flip-card-inner ${isFlipped ? 'flipped' : ''}`}>
         <div className="flip-card-front">
           <Image
