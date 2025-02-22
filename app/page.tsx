@@ -5,6 +5,7 @@ import CardFlip from '@/components/cardflip';
 import LangwarrinCard from '@/components/langwarrincard';
 import PacmanCard from '@/components/pacmancard';
 import CatanCard from '@/components/catancard';
+import CardFlipImage from '@/components/cardflipimage';
 
 export default function HomePage() {
   useEffect(() => {
@@ -49,11 +50,11 @@ export default function HomePage() {
             Some Fun Facts About Me:
           </h3>
         </section>
-        <section className="fade-right info-set">
-          <CardFlip image='./card1.svg' text="First Card"/>
-          <CardFlip image='./card2.svg' text="Second Card"/>
-          <CardFlip image='./card3.svg' text="Third Card"/>
-          <CardFlip image='./card4.svg' text="Fourth Card"/>
+        <section className="fade-right info-set ">
+          <CardFlip image='./card1.svg' text="I’ve lived in three different countries, each contributing to my identity."/>
+          <CardFlip image='./card2.svg' text="I am part of a band and can play nearly a dozen instruments"/>
+          <CardFlip image='./card3.svg' text="I volunteer for several communities by organising food banks and relief resources"/>
+          <CardFlipImage image='./card4.svg' imagelink='/dog.jpg'/>
         </section>
         <h2 className="text-5xl font-bold mb-4 pb-8 text-center fade-in">Projects</h2>
         <section className="fade-in info-set">

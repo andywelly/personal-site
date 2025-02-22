@@ -3,7 +3,7 @@
   width: 200px;
   height: 200px;
   perspective: 1000px;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .flip-card-inner {
@@ -12,11 +12,10 @@
   height: 100%;
   text-align: center;
   transition: transform 0.8s;
-  transform-style: preserve-3d; 
-  transform: translateZ(0); 
-  will-change: transform; 
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  will-change: transform;
 }
-
 
 .flip-card-inner.flipped {
   transform: rotateY(180deg);
@@ -28,6 +27,7 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  border-radius: 15px;
 }
 
 .flip-card-front {
@@ -43,4 +43,19 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
+}
+
+.flip-card-back::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 101, 112, 0.50);
+  border-radius: 15px;
+  transform: scaleX(0.82);
+  transform-origin: center;
+  z-index: -1; 
+  box-shadow: 0 0 0 2px white; 
 }
