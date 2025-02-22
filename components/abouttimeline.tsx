@@ -135,7 +135,7 @@ export default function AboutPage() {
             <TimelineOppositeContent className="hidden md:block">
               <div className="relative w-48 h-48 mx-auto">
                 <Image
-                  src="/me.jpeg" // Replace with your image path
+                  src="/coles.jpeg" // Replace with your image path
                   alt="Coles Group"
                   fill
                   className="object-cover rounded-lg"
@@ -230,8 +230,8 @@ export default function AboutPage() {
             <TimelineOppositeContent className="hidden md:block">
               <div className="relative w-48 h-48 mx-auto">
                 <Image
-                  src="/aws.png"
-                  alt="Certifications"
+                  src="/basketball.jpeg"
+                  alt="basketball team"
                   fill
                   className="object-cover rounded-lg"
                 />
@@ -239,18 +239,16 @@ export default function AboutPage() {
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot color="warning">
-                <CardMembership />
+                <SportsBasketball />
               </TimelineDot>
             </TimelineSeparator>
             <TimelineContent>
               <div className="p-4">
-                <h2 className="text-2xl font-bold">Certifications and Awards</h2>
+                <h2 className="text-2xl font-bold">Hobbies and Interests</h2>
                 <ul className='py-2'>
-                    <li className='py-1'>AWS Certified Cloud Practitioner (Issued Feb 2024)</li>
-                    <li className='py-1'>Google Foundations of Cybersecurity  (Issued Jan 2025)</li>
-                    <li className='py-1'>INFO30006 Exemplar for Research on AI-Generated Content</li>
-                    <li className='py-1'>Outstanding Leadership and Team Collaboration Award, Coles Group</li>
-                    <li className='py-1'>Pursuing ISC2 Certified in Cybersecurity (CC)  </li>
+                    <li className='py-1'>I play multiple sports, including basketball, tennis, swimming and rockclimbing</li>
+                    <li className='py-1'>Music is one of my passions, I can play proficiently nearly a dozen instruments</li>
+                    <li className='py-1'>I love cooking and exploring new foods</li>
                 </ul>
               </div>
             </TimelineContent>
