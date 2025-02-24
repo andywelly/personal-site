@@ -15,6 +15,8 @@ import Image from 'next/image';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
+import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
+
 
 
 export default function AboutPage() {
@@ -43,10 +45,10 @@ export default function AboutPage() {
     <div>
       {/* Header Section */}
       <div className="w-full fade-in bg-[rgba(5,101,112,0.50)]">
-        <section className="max-w-[800px] mx-auto fade-in title-set flex-col md:flex-row py-12">
+        <section className="max-w-[900px] mx-auto fade-in title-set flex-col md:flex-row py-12">
           {/* Left Column */}
           <div className="w-full md:w-1/2">
-            <div className="social-links flex justify-left gap-4 relative">
+            <div className="flex justify-left gap-4 relative">
               <h1 className="text-5xl font-bold mb-4 text-left">About Me</h1>
               <div className='flex gap-4 mt-2 ml-1'>
                 <a href="https://github.com/andywelly" target="_blank" rel="noopener noreferrer">
@@ -58,9 +60,12 @@ export default function AboutPage() {
                 <a href="mailto:andwele.ancheta@outlook.com">
                   <EmailIcon fontSize="large" />
                 </a>
+                <a href="/resume.pdf">
+                  <AssignmentIndIcon fontSize="large" />
+                </a>
               </div>
             </div>
-            <div className='mt-4'>
+            <div>
               <h2 className="text-3xl font-bold mb-4">My Journey</h2>
               <p className="text-xl">
                 A timeline of my academic, professional, and volunteer experiences.
