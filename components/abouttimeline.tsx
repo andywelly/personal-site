@@ -45,7 +45,7 @@ export default function AboutPage() {
     <div>
       {/* Header Section */}
       <div className="w-full fade-in bg-[rgba(5,101,112,0.50)]">
-        <section className="max-w-[800px] mx-auto fade-in title-set flex-col md:flex-row py-12">
+        <section className="max-w-[900px] mx-auto fade-in title-set flex-col md:flex-row py-12">
           {/* Left Column */}
           <div className="w-full md:w-1/2">
             <div className="flex justify-left gap-4 relative">
