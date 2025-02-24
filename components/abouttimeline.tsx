@@ -15,7 +15,7 @@ import Image from 'next/image';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
-import AttachFileIcon from '@mui/icons-material/AttachFile';
+import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 
 
 
@@ -60,13 +60,10 @@ export default function AboutPage() {
                 <a href="mailto:andwele.ancheta@outlook.com">
                   <EmailIcon fontSize="large" />
                 </a>
+                <a href="/resume.pdf">
+                  <AssignmentIndIcon fontSize="large" />
+                </a>
               </div>
-            </div>
-            <div className='flex justify-end gap-2'>
-              <h2 className="text-2xl font-bold mb-4">Resume</h2>
-              <a onClick={() => window.open('/resume.pdf', '_blank')}>
-                <AttachFileIcon fontSize='large'/>
-              </a>
             </div>
             <div>
               <h2 className="text-3xl font-bold mb-4">My Journey</h2>
