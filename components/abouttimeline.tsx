@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Timeline,
   TimelineItem,
@@ -20,6 +20,7 @@ import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 
 
 export default function AboutPage() {
+  const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -40,9 +41,51 @@ export default function AboutPage() {
       hiddenElements.forEach((el) => observer.unobserve(el));
     };
   }, []);
+  const handleEmailClick = () => {
+    setIsEmailModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsEmailModalOpen(false);
+  };
+
+  const handleEmailRedirect = () => {
+    window.location.href = 'mailto:andwele.ancheta@outlook.com';
+  };
 
   return (
     <div>
+        {/* Inline Modal for Email */}
+        {isEmailModalOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+          onClick={handleCloseModal}
+        >
+          <div
+            className="bg-[var(--accent-color)] p-6 rounded-lg shadow-lg max-w-md w-full text-center text-white"
+            onClick={(e) => e.stopPropagation()} // Prevent modal from closing when clicking inside
+          >
+            <h2 className="text-xl font-bold mb-4">Contact Me</h2>
+            <p className="mb-6">
+              My email address is: <strong>andwele.ancheta@outlook.com</strong>
+            </p>
+            <div className="flex justify-center gap-4">
+              <button
+                className="px-4 py-2 bg-white text-[var(--accent-color)] rounded hover:bg-gray-100 transition-colors"
+                onClick={handleCloseModal}
+              >
+                Cancel
+              </button>
+              <button
+                className="px-4 py-2 bg-white text-[var(--accent-color)] rounded hover:bg-gray-100 transition-colors"
+                onClick={handleEmailRedirect}
+              >
+                Open Email
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       {/* Header Section */}
       <div className="w-full fade-in bg-[rgba(5,101,112,0.50)]">
         <section className="max-w-[900px] mx-auto fade-in title-set flex-col md:flex-row py-12">
@@ -57,7 +100,7 @@ export default function AboutPage() {
                 <a href="https://www.linkedin.com/in/andwele-ancheta/" target="_blank" rel="noopener noreferrer">
                   <LinkedInIcon fontSize="large" />
                 </a>
-                <a href="mailto:andwele.ancheta@outlook.com">
+                <a href="#" onClick={handleEmailClick}>
                   <EmailIcon fontSize="large" />
                 </a>
                 <a href="/resume.pdf">
