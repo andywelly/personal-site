@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Timeline,
   TimelineItem,
@@ -16,10 +16,12 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
+import MailPopup from './mailpopup';
 
 
 
 export default function AboutPage() {
+  const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -40,12 +42,29 @@ export default function AboutPage() {
       hiddenElements.forEach((el) => observer.unobserve(el));
     };
   }, []);
+  const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault(); 
+    setIsEmailModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsEmailModalOpen(false);
+  };
+
+  const handleEmailRedirect = () => {
+    window.location.href = 'mailto:andwele.ancheta@outlook.com';
+  };
 
   return (
     <div>
+      <MailPopup
+        isOpen={isEmailModalOpen}
+        onClose={handleCloseModal}
+        onEmailRedirect={handleEmailRedirect}
+      />
       {/* Header Section */}
       <div className="w-full fade-in bg-[rgba(5,101,112,0.50)]">
-        <section className="max-w-[900px] mx-auto fade-in title-set flex-col md:flex-row py-12">
+        <section className="max-w-[1000px] mx-auto fade-in title-set flex-col md:flex-row py-12">
           {/* Left Column */}
           <div className="w-full md:w-1/2">
             <div className="flex justify-left gap-4 relative">
@@ -57,7 +76,12 @@ export default function AboutPage() {
                 <a href="https://www.linkedin.com/in/andwele-ancheta/" target="_blank" rel="noopener noreferrer">
                   <LinkedInIcon fontSize="large" />
                 </a>
-                <a href="mailto:andwele.ancheta@outlook.com">
+                <a
+                  href="#"
+                  onClick={handleEmailClick}
+                  className="focus:outline-none"
+                  aria-label="Email"
+                >
                   <EmailIcon fontSize="large" />
                 </a>
                 <a href="/resume.pdf">
@@ -77,7 +101,7 @@ export default function AboutPage() {
           <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
             <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden">
               <Image
-                src="/me.jpg" // Path to your image in the public folder
+                src="/me.jpg"
                 alt="Andwele Ancheta"
                 fill
                 className="object-cover"
@@ -95,7 +119,7 @@ export default function AboutPage() {
             <TimelineOppositeContent className="hidden md:block">
               <div className="relative w-48 h-48 mx-auto">
                 <Image
-                  src="/graduation.jpeg" // Replace with your image path
+                  src="/graduation.jpeg" 
                   alt="University of Melbourne"
                   fill
                   className="object-cover rounded-lg"
@@ -157,7 +181,7 @@ export default function AboutPage() {
             <TimelineOppositeContent className="hidden md:block">
               <div className="relative w-48 h-48 mx-auto">
                 <Image
-                  src="/coles.jpeg" // Replace with your image path
+                  src="/coles.jpeg" 
                   alt="Coles Group"
                   fill
                   className="object-cover rounded-lg"
@@ -188,7 +212,7 @@ export default function AboutPage() {
             <TimelineOppositeContent className="hidden md:block">
               <div className="relative w-48 h-48 mx-auto">
                 <Image
-                  src="/project_juan.jpeg" // Replace with your image path
+                  src="/project_juan.jpeg" 
                   alt="Project Juan Charity"
                   fill
                   className="object-cover rounded-lg"
