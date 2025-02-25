@@ -8,14 +8,14 @@ import MailPopup from './mailpopup';
 
 export default function Footer() {
   const [year, setYear] = useState<number | null>(null);
-   const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
+  const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
 
   useEffect(() => {
     setYear(new Date().getFullYear());
   }, []);
-  
+
   const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault(); 
+    e.preventDefault();
     setIsEmailModalOpen(true);
   };
 
@@ -26,28 +26,40 @@ export default function Footer() {
   const handleEmailRedirect = () => {
     window.location.href = 'mailto:andwele.ancheta@outlook.com';
   };
+
   return (
     <footer className="footer">
-       <MailPopup
+      <MailPopup
         isOpen={isEmailModalOpen}
         onClose={handleCloseModal}
         onEmailRedirect={handleEmailRedirect}
       />
       <div className="social-links flex justify-center gap-4 relative z-10">
-        <a href="https://github.com/andywelly" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/andywelly"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Open GitHub" // Added title attribute
+        >
           <GitHubIcon fontSize="large" />
         </a>
-        <a href="https://www.linkedin.com/in/andwele-ancheta/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.linkedin.com/in/andwele-ancheta/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Open LinkedIn" // Added title attribute
+        >
           <LinkedInIcon fontSize="large" />
         </a>
         <a
-            href="#"
-            onClick={handleEmailClick}
-            className="focus:outline-none"
-            aria-label="Email"
+          href="#"
+          onClick={handleEmailClick}
+          className="focus:outline-none"
+          aria-label="Email"
+          title="Open Email Modal" // Added title attribute
         >
           <EmailIcon fontSize="large" />
-        </a>  
+        </a>
       </div>
       <p className="flex justify-center gap-4 py-5 relative z-10">
         &copy; {year} Andwele Ancheta. All rights reserved.
