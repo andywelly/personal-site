@@ -16,6 +16,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
+import MailPopup from './mailpopup';
 
 
 
@@ -41,7 +42,8 @@ export default function AboutPage() {
       hiddenElements.forEach((el) => observer.unobserve(el));
     };
   }, []);
-  const handleEmailClick = () => {
+  const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault(); 
     setIsEmailModalOpen(true);
   };
 
@@ -55,40 +57,14 @@ export default function AboutPage() {
 
   return (
     <div>
-        {/* Inline Modal for Email */}
-        {isEmailModalOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
-          onClick={handleCloseModal}
-        >
-          <div
-            className="bg-[var(--accent-color)] p-6 rounded-lg shadow-lg max-w-md w-full text-center text-white"
-            onClick={(e) => e.stopPropagation()} // Prevent modal from closing when clicking inside
-          >
-            <h2 className="text-xl font-bold mb-4">Contact Me</h2>
-            <p className="mb-6">
-              My email address is: <strong>andwele.ancheta@outlook.com</strong>
-            </p>
-            <div className="flex justify-center gap-4">
-              <button
-                className="px-4 py-2 bg-white text-[var(--accent-color)] rounded hover:bg-gray-100 transition-colors"
-                onClick={handleCloseModal}
-              >
-                Cancel
-              </button>
-              <button
-                className="px-4 py-2 bg-white text-[var(--accent-color)] rounded hover:bg-gray-100 transition-colors"
-                onClick={handleEmailRedirect}
-              >
-                Open Email
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      <MailPopup
+        isOpen={isEmailModalOpen}
+        onClose={handleCloseModal}
+        onEmailRedirect={handleEmailRedirect}
+      />
       {/* Header Section */}
       <div className="w-full fade-in bg-[rgba(5,101,112,0.50)]">
-        <section className="max-w-[900px] mx-auto fade-in title-set flex-col md:flex-row py-12">
+        <section className="max-w-[1000px] mx-auto fade-in title-set flex-col md:flex-row py-12">
           {/* Left Column */}
           <div className="w-full md:w-1/2">
             <div className="flex justify-left gap-4 relative">
@@ -100,7 +76,12 @@ export default function AboutPage() {
                 <a href="https://www.linkedin.com/in/andwele-ancheta/" target="_blank" rel="noopener noreferrer">
                   <LinkedInIcon fontSize="large" />
                 </a>
-                <a href="#" onClick={handleEmailClick}>
+                <a
+                  href="#"
+                  onClick={handleEmailClick}
+                  className="focus:outline-none"
+                  aria-label="Email"
+                >
                   <EmailIcon fontSize="large" />
                 </a>
                 <a href="/resume.pdf">
@@ -120,7 +101,7 @@ export default function AboutPage() {
           <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
             <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden">
               <Image
-                src="/me.jpg" // Path to your image in the public folder
+                src="/me.jpg"
                 alt="Andwele Ancheta"
                 fill
                 className="object-cover"
@@ -138,7 +119,7 @@ export default function AboutPage() {
             <TimelineOppositeContent className="hidden md:block">
               <div className="relative w-48 h-48 mx-auto">
                 <Image
-                  src="/graduation.jpeg" // Replace with your image path
+                  src="/graduation.jpeg" 
                   alt="University of Melbourne"
                   fill
                   className="object-cover rounded-lg"
@@ -200,7 +181,7 @@ export default function AboutPage() {
             <TimelineOppositeContent className="hidden md:block">
               <div className="relative w-48 h-48 mx-auto">
                 <Image
-                  src="/coles.jpeg" // Replace with your image path
+                  src="/coles.jpeg" 
                   alt="Coles Group"
                   fill
                   className="object-cover rounded-lg"
@@ -231,7 +212,7 @@ export default function AboutPage() {
             <TimelineOppositeContent className="hidden md:block">
               <div className="relative w-48 h-48 mx-auto">
                 <Image
-                  src="/project_juan.jpeg" // Replace with your image path
+                  src="/project_juan.jpeg" 
                   alt="Project Juan Charity"
                   fill
                   className="object-cover rounded-lg"
