@@ -1,4 +1,4 @@
-/* Image Flip Container */
+
 .image-flip-container {
     width: 200px;
     height: 200px;
@@ -15,20 +15,20 @@
     transform-style: preserve-3d;
   }
   
-  /* Flip on hover */
+
   .image-flip-container:hover .image-flip-inner {
     transform: rotateY(180deg);
   }
   
-  /* Front and Back Styles */
+
   .image-flip-front,
   .image-flip-back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 50%; /* Circular shape */
-    overflow: hidden; /* Ensures the image stays within the circular boundary */
+    border-radius: 50%; 
+    overflow: hidden; 
   }
   
   /* Front Side */
@@ -36,10 +36,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0; /* Fallback background */
+    background-color: #f0f0f0; 
   }
   
-  /* Add outline to the front side */
+
   .image-flip-front::before {
     content: '';
     position: absolute;
@@ -47,21 +47,21 @@
     left: 0;
     width: 100%;
     height: 100%;
-    border: 4px solid white; /* White border */
+    border: 4px solid white;
     border-radius: 50%;
     box-sizing: border-box;
   }
   
-  /* Back Side */
+
   .image-flip-back {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(5, 101, 112, 0.5); /* Semi-transparent background */
-    transform: rotateY(180deg); /* Initially flipped */
+    background-color: rgba(5, 101, 112, 0.5);
+    transform: rotateY(180deg);
   }
   
-  /* Add outline to the back side */
+
   .image-flip-back::before {
     content: '';
     position: absolute;
@@ -69,7 +69,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    border: 4px solid white; /* White border */
+    border: 4px solid white;
     border-radius: 50%;
     box-sizing: border-box;
   }
