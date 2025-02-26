@@ -40,9 +40,15 @@ export default function Footer() {
         <a href="https://www.linkedin.com/in/andwele-ancheta/" target="_blank" rel="noopener noreferrer" title='Open LinkedIn'>
           <LinkedInIcon fontSize="large" />
         </a>
-        <a href="mailto:andwele.ancheta@outlook.com" title='Open Email'>
-          <EmailIcon fontSize="large" />
-        </a>  
+        <a
+            href="#"
+            onClick={handleEmailClick}
+            className="focus:outline-none"
+            aria-label="Email"
+            title='Open Email'
+          >
+            <EmailIcon fontSize="large" />
+          </a>
       </div>
       <p className="flex justify-center gap-4 py-5 relative z-10">
         &copy; {year} Andwele Ancheta. All rights reserved.

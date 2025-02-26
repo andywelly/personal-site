@@ -81,6 +81,7 @@ export default function AboutPage() {
                   onClick={handleEmailClick}
                   className="focus:outline-none"
                   aria-label="Email"
+                  title='Open Email'
                 >
                   <EmailIcon fontSize="large" />
                 </a>
