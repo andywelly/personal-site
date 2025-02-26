@@ -34,10 +34,10 @@ export default function Footer() {
         onEmailRedirect={handleEmailRedirect}
       />
       <div className="social-links flex justify-center gap-4 relative z-10">
-        <a href="https://github.com/andywelly" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/andywelly" target="_blank" rel="noopener noreferrer" title='Open Github'>
           <GitHubIcon fontSize="large" />
         </a>
-        <a href="https://www.linkedin.com/in/andwele-ancheta/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/andwele-ancheta/" target="_blank" rel="noopener noreferrer" title='Open LinkedIn'>
           <LinkedInIcon fontSize="large" />
         </a>
         <a
@@ -45,9 +45,10 @@ export default function Footer() {
             onClick={handleEmailClick}
             className="focus:outline-none"
             aria-label="Email"
-        >
-          <EmailIcon fontSize="large" />
-        </a>  
+            title='Open Email'
+          >
+            <EmailIcon fontSize="large" />
+          </a>
       </div>
       <p className="flex justify-center gap-4 py-5 relative z-10">
         &copy; {year} Andwele Ancheta. All rights reserved.
