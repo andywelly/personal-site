@@ -7,7 +7,8 @@ Welcome to my personal website! This project showcases my portfolio, skills, and
 ## Screenshots
 
 <img width="1507" alt="image" src="https://github.com/user-attachments/assets/6d6f85cb-59c4-4ac5-8cbb-f48a9534ce56" />
-<img width="1126" alt="image" src="https://github.com/user-attachments/assets/59598a19-4749-4b01-af38-f298747d9ed5" />
+<img width="1507" alt="image" src="https://github.com/user-attachments/assets/68247d6b-4d87-4561-894a-20a019825629" />
+
 
 ## Technologies
 
