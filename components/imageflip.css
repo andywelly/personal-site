@@ -1,0 +1,62 @@
+/* Image Flip Container */
+.image-flip-container {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  
+  .image-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Flip on hover */
+  .image-flip-container:hover .image-flip-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Front and Back Styles */
+  .image-flip-front,
+  .image-flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 50%; /* Circular shape */
+    overflow: hidden; /* Ensures the image stays within the circular boundary */
+  }
+  
+  /* Front Side */
+  .image-flip-front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Fallback background */
+  }
+  
+  /* Back Side */
+  .image-flip-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(5, 101, 112, 0.5); /* Semi-transparent background */
+    transform: rotateY(180deg); /* Initially flipped */
+  }
+  
+  /* Optional: Add a border or outline to the back side */
+  .image-flip-back::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px solid white; /* White border */
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
