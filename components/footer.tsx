@@ -4,17 +4,35 @@ import React, { useEffect, useState } from 'react';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
+import MailPopup from './mailpopup';
 
 export default function Footer() {
   const [year, setYear] = useState<number | null>(null);
+   const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
 
-  // Use useEffect to set the year on the client side
   useEffect(() => {
     setYear(new Date().getFullYear());
   }, []);
+  
+  const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault(); 
+    setIsEmailModalOpen(true);
+  };
 
+  const handleCloseModal = () => {
+    setIsEmailModalOpen(false);
+  };
+
+  const handleEmailRedirect = () => {
+    window.location.href = 'mailto:andwele.ancheta@outlook.com';
+  };
   return (
     <footer className="footer">
+       <MailPopup
+        isOpen={isEmailModalOpen}
+        onClose={handleCloseModal}
+        onEmailRedirect={handleEmailRedirect}
+      />
       <div className="social-links flex justify-center gap-4 relative z-10">
         <a href="https://github.com/andywelly" target="_blank" rel="noopener noreferrer" title='Open Github'>
           <GitHubIcon fontSize="large" />
@@ -24,7 +42,7 @@ export default function Footer() {
         </a>
         <a href="mailto:andwele.ancheta@outlook.com" title='Open Email'>
           <EmailIcon fontSize="large" />
-        </a>
+        </a>  
       </div>
       <p className="flex justify-center gap-4 py-5 relative z-10">
         &copy; {year} Andwele Ancheta. All rights reserved.
