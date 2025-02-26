@@ -17,6 +17,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import MailPopup from './mailpopup';
+import './imageflip.css';
 
 
 
@@ -64,7 +65,7 @@ export default function AboutPage() {
       />
       {/* Header Section */}
       <div className="w-full fade-in bg-[rgba(5,101,112,0.50)]">
-        <section className="max-w-[1000px] mx-auto fade-in title-set flex-col md:flex-row py-12">
+        <section className="max-w-[800px] mx-auto fade-in title-set flex-col md:flex-row py-12">
           {/* Left Column */}
           <div className="w-full md:w-1/2">
             <div className="flex justify-left gap-4 relative">
@@ -100,13 +101,29 @@ export default function AboutPage() {
 
           {/* Right Column: Image */}
           <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
-            <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden">
-              <Image
-                src="/me.jpg"
-                alt="Andwele Ancheta"
-                fill
-                className="object-cover"
-              />
+            <div className="image-flip-container">
+              <div className="image-flip-inner">
+                {/* Front Side */}
+                <div className="image-flip-front">
+                  <Image
+                    src="/me_front.jpeg" // Front image
+                    alt="Front of Andwele Ancheta"
+                    width={200}
+                    height={200}
+                    className="object-cover"
+                  />
+                </div>
+                {/* Back Side */}
+                <div className="image-flip-back">
+                  <Image
+                    src="/me.jpg" // Back image
+                    alt="Back of Andwele Ancheta"
+                    width={200}
+                    height={200}
+                    className="object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
