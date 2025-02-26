@@ -39,6 +39,19 @@
     background-color: #f0f0f0; /* Fallback background */
   }
   
+  /* Add outline to the front side */
+  .image-flip-front::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px solid white; /* White border */
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+  
   /* Back Side */
   .image-flip-back {
     display: flex;
@@ -48,7 +61,7 @@
     transform: rotateY(180deg); /* Initially flipped */
   }
   
-  /* Optional: Add a border or outline to the back side */
+  /* Add outline to the back side */
   .image-flip-back::before {
     content: '';
     position: absolute;
