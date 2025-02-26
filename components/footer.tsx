@@ -16,13 +16,13 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="social-links flex justify-center gap-4 relative z-10">
-        <a href="https://github.com/andywelly" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/andywelly" target="_blank" rel="noopener noreferrer" title='Open Github'>
           <GitHubIcon fontSize="large" />
         </a>
-        <a href="https://www.linkedin.com/in/andwele-ancheta/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/andwele-ancheta/" target="_blank" rel="noopener noreferrer" title='Open LinkedIn'>
           <LinkedInIcon fontSize="large" />
         </a>
-        <a href="mailto:andwele.ancheta@outlook.com">
+        <a href="mailto:andwele.ancheta@outlook.com" title='Open Email'>
           <EmailIcon fontSize="large" />
         </a>
       </div>

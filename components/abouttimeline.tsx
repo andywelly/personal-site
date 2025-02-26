@@ -51,16 +51,16 @@ export default function AboutPage() {
             <div className="flex justify-left gap-4 relative">
               <h1 className="text-5xl font-bold mb-4 text-left">About Me</h1>
               <div className='flex gap-4 mt-2 ml-1'>
-                <a href="https://github.com/andywelly" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/andywelly" target="_blank" rel="noopener noreferrer" title='Open Github'>
                   <GitHubIcon fontSize="large" />
                 </a>
-                <a href="https://www.linkedin.com/in/andwele-ancheta/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/andwele-ancheta/" target="_blank" rel="noopener noreferrer" title='Open LinkedIn'>
                   <LinkedInIcon fontSize="large" />
                 </a>
-                <a href="mailto:andwele.ancheta@outlook.com">
+                <a href="mailto:andwele.ancheta@outlook.com" title='Open Email'>
                   <EmailIcon fontSize="large" />
                 </a>
-                <a href="/resume.pdf">
+                <a href="/resume.pdf" title='View Resume'>
                   <AssignmentIndIcon fontSize="large" />
                 </a>
               </div>
