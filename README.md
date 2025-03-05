@@ -19,7 +19,7 @@ This website is built using the following technologies:
 *   **HTML5/CSS3:** The foundation of web development.
 *   **JavaScript (ES6+):** The programming language used for interactivity and dynamic features.
 *   **Git:** Version control system for tracking changes and collaborating on the project.
-*   **AWS Amplify:** A platform for building and deploying full-stack web and mobile applications.
+*   **AWS:** A platform I used to deploy my site.
 
 ## Getting Started
 
