@@ -1,5 +1,5 @@
 # Andwele Ancheta - Personal Website
-Welcome to my personal website! This project showcases my portfolio, skills, and projects as a Fullstack Developer. Built with Next.js, Tailwind CSS, and modern web development practices, this site is designed to be fast, responsive, and visually appealing.
+Welcome to my personal website! This project serves as a showcase of my portfolio and skills as a Fullstack Developer. Built with Next.js and Tailwind CSS, it's designed to be fast, responsive, and visually engaging.  Feel free to explore my work and get in touch!
 
 ## Live Demo
 [Check out the live version of my site](https://www.andweleancheta.click/)
