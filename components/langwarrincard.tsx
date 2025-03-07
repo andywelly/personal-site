@@ -22,7 +22,7 @@ export default function LangwarrinCard() {
           {/* Left Column: Image */}
           <div className="w-1/2">
             <Image
-              src="./langwarrin.svg"
+              src="/langwarrin.png"
               alt="Lagwarrin Community Centre Website"
               width={600}
               height={400}

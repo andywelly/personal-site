@@ -76,6 +76,14 @@ export default function PacmanPage() {
                   height={50}
                 />
               </a>
+              <a href="https://gradle.org/" target="_blank" rel="noopener noreferrer" title="LWJGL"> {/* Link for LWJGL */}
+                <Image
+                  src="/gradle.png" 
+                  alt="gradle Logo"
+                  width={50}
+                  height={50}
+                />
+              </a>
             </div>
           </div>
         </div>

@@ -26,7 +26,7 @@ export default function PacmanCard() {
             <div className="mb-6">
               <p className="text-base text-center">
             Developed a Pac-Man game in Java, implementing core mechanics such as character control, autonomous ghost AI, and score management.
-             This object-oriented software development project showcases proficiency in design principles and the software development life cycle  
+             This object-oriented software development project showcases proficiency in design principles and the software development life cycle.
               </p>
             </div>
             <div>
@@ -44,6 +44,14 @@ export default function PacmanCard() {
                 <Image
                   src="/lwjgl.svg" 
                   alt="LWJGL Logo"
+                  width={50}
+                  height={50}
+                />
+              </a>
+              <a href="https://gradle.org/" target="_blank" rel="noopener noreferrer" title="LWJGL"> {/* Link for LWJGL */}
+                <Image
+                  src="/gradle.png" 
+                  alt="gradle Logo"
                   width={50}
                   height={50}
                 />

@@ -6,6 +6,7 @@ import LangwarrinCard from '@/components/langwarrincard';
 import PacmanCard from '@/components/pacmancard';
 import CatanCard from '@/components/catancard';
 import CardFlipImage from '@/components/cardflipimage';
+import AutoCompleteCard from '@/components/autocompletecard';
 
 export default function HomePage() {
   useEffect(() => {
@@ -59,6 +60,9 @@ export default function HomePage() {
         <h2 className="text-5xl font-bold mb-4 pb-8 text-center fade-in">Projects</h2>
         <section className="fade-in info-set">
         <LangwarrinCard/>
+        </section>
+        <section className='fade-in info-set'>
+          <AutoCompleteCard/>
         </section>
         <section className='fade-in info-set'>
           <CatanCard/>
