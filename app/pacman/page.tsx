@@ -46,7 +46,7 @@ export default function PacmanPage() {
           <div className="w-3/5">
             {/* First Section of Text */}
             <div className="mb-6">
-              <p className="text-base text-center">
+              <p className="text-justify">
               This project involved the development of a Pac-Man game using Java, where I implemented the core game mechanics, 
               including player-controlled character movement, autonomous ghost AI, and a system for managing the game score.  
               This involved careful consideration of object-oriented software development principles, allowing for modular, 

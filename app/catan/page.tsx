@@ -55,7 +55,7 @@ export default function CatanPage() {
           <div className="w-3/5">
             {/* First Section of Text */}
             <div className="mb-6">
-              <p className="text-base text-center">
+              <p className="text-justify">
               This project, a Catan map generator, was created for personal use among family and friends to enhance our Catan game nights.  
               Tired of imbalanced setups and arguments over resource distribution, I designed this tool to ensure fair and randomised game boards.  
               It automatically distributes resource tiles, number tokens, and port placements, guaranteeing a unique and balanced playing 
