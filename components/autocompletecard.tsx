@@ -2,11 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function PacmanCard() {
+export default function AutoCompleteCard() {
   return (
     <div className="text-[#e0e0e0] font-inter flex flex-col items-center justify-center">
       <div className="w-full mx-auto">
-        <h1 className="text-3xl font-bold text-center mb-8">Pac-Man</h1>
+        <h1 className="text-3xl font-bold text-center mb-8">Search AutoComplete Lookup</h1>
 
         <div className="flex gap-8">
           {/* Left Column: Image */}
@@ -26,7 +26,7 @@ export default function PacmanCard() {
             <div className="mb-6">
               <p className="text-base text-center">
             Developed a Pac-Man game in Java, implementing core mechanics such as character control, autonomous ghost AI, and score management.
-             This object-oriented software development project showcases proficiency in design principles and the software development life cycle.
+             This object-oriented software development project showcases proficiency in design principles and the software development life cycle  
               </p>
             </div>
             <div>
@@ -44,14 +44,6 @@ export default function PacmanCard() {
                 <Image
                   src="/lwjgl.svg" 
                   alt="LWJGL Logo"
-                  width={50}
-                  height={50}
-                />
-              </a>
-              <a href="https://gradle.org/" target="_blank" rel="noopener noreferrer" title="LWJGL"> {/* Link for LWJGL */}
-                <Image
-                  src="/gradle.png" 
-                  alt="gradle Logo"
                   width={50}
                   height={50}
                 />
