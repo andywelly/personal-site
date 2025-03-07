@@ -55,7 +55,7 @@ export default function LangwarrinPage() {
           <div className="w-3/5">
             {/* First Section of Text */}
             <div className="mb-6">
-              <p className="text-base text-center">
+              <p className="text-justify">
               Leading a team of five, we partnered with the Langwarrin Community Centre to redesign and improve their existing website, 
               focusing on accessibility and user experience. This involved close collaboration to understand their needs and translate 
               them into technical requirements. <br/><br/>

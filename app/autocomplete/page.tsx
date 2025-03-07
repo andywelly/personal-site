@@ -130,24 +130,6 @@ export default function AutcompletePage() {
                 of clear technical reporting. <br />
               </p>
             </div>
-            <div className="flex flex-wrap gap-4 justify-center pt-4">
-              <a href="https://www.java.com/en/" target="_blank" rel="noopener noreferrer" title="Java">
-                <Image
-                  src="/java.svg"
-                  alt="Java Logo"
-                  width={50}
-                  height={50}
-                />
-              </a>
-              <a href="https://www.lwjgl.org/" target="_blank" rel="noopener noreferrer" title="LWJGL">
-                <Image
-                  src="/lwjgl.svg"
-                  alt="LWJGL Logo"
-                  width={50}
-                  height={50}
-                />
-              </a>
-            </div>
           </div>
         </div>
       </div>
