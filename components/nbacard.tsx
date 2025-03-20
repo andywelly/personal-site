@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { SiPostgresql, SiTypescript } from 'react-icons/si'; // Import icons
+import { SiPostgresql, SiTypescript } from 'react-icons/si';
 import { RiNextjsLine, RiVercelFill } from "react-icons/ri";
 
 export default function NbaCard() {
