@@ -48,7 +48,7 @@ export default function PacmanCard() {
                   height={50}
                 />
               </a>
-              <a href="https://gradle.org/" target="_blank" rel="noopener noreferrer" title="LWJGL"> {/* Link for LWJGL */}
+              <a href="https://gradle.org/" target="_blank" rel="noopener noreferrer" title="Gradle"> {/* Link for LWJGL */}
                 <Image
                   src="/gradle.png" 
                   alt="gradle Logo"
