@@ -20,7 +20,7 @@ export default function CatanCard() {
           {/* Left Column: Image */}
           <div className="w-1/2">
             <Image
-              src="./catan.svg"
+              src="/catan.png"
               alt="Catan Map Generator Screenshot"
               width={600}
               height={400}
