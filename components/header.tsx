@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Header() {
   return (
-    <header className="p-4">
+    <header className="fixed top-0 left-0 right-0 p-4 bg-[rgba(0,0,0,0.8)] backdrop-blur-sm">
       <nav className="relative z-10 p-5 flex items-center justify-between">
         <Link
           href="/"

@@ -22,11 +22,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className="bg-[#f0f0f0] text-[#e0e0e0] font-inter">
         <div className="fixed top-0 left-0 w-full h-full bg-[url('/background.jpg')] bg-cover bg-center bg-no-repeat backdrop-filter:blur(5px)"></div>
-        <Header />
-        <main className="mx-auto my-8 p-4 relative">
+        <div className='relative z-10'>
+          <Header/>
+        </div>
+        <main className="mx-auto my-8 p-4 relative pt-28">
           {children}
         </main>
-        <div className='relateive z-10'>
+        <div className='relative z-10'>
          <Footer/>
         </div>
       </body>
