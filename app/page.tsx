@@ -62,7 +62,7 @@ export default function HomePage() {
           <CardFlipImage image='./card4.svg' imagelink='/dog.jpg'/>
         </section>
          */}
-        <div className="scroll-mt-20">
+        <div id="projects" className="scroll-mt-20 pt-6">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold my-8 py-4 text-center fade-in">Projects</h2>
         </div>
         
