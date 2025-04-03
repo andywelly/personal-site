@@ -29,6 +29,14 @@ export default function Header() {
           </li>
           <li>
             <Link
+              href="/#projects"
+              className="text-white hover:bg-[var(--accent-color)] hover:border-4 border-dashed hover:border-white px-6 py-2 rounded transition-all duration-300"
+            >
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link
               href="/about"
               className="text-white hover:bg-[var(--accent-color)] hover:border-4 border-dashed hover:border-white px-6 py-2 rounded transition-all duration-300"
             >
