@@ -16,9 +16,9 @@
   }
   
 
-  .image-flip-container:hover .image-flip-inner {
+  /* .image-flip-container:hover .image-flip-inner {
     transform: rotateY(180deg);
-  }
+  } */
   
 
   .image-flip-front,
