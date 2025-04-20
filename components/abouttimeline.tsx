@@ -16,11 +16,23 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import MailPopup from './mailpopup';
 import './imageflip.css';
 
 export default function AboutPage() {
   const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  const timelineImages = [
+    { src: "/graduation.jpeg", alt: "University of Melbourne", title: "Education" },
+    { src: "/langwarrin_timeline.png", alt: "Langwarrin Community Centre", title: "Software Development" },
+    { src: "/coles.jpeg", alt: "Coles Group", title: "Work Experience" },
+    { src: "/project_juan.jpeg", alt: "Project Juan Charity", title: "Volunteer Work" },
+    { src: "/aws.png", alt: "Certifications", title: "Certifications" },
+    { src: "/basketball.jpeg", alt: "Basketball Team", title: "Hobbies" }
+  ];
   
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -54,6 +66,14 @@ export default function AboutPage() {
 
   const handleEmailRedirect = () => {
     window.location.href = 'mailto:andwele.ancheta@outlook.com';
+  };
+  
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev === timelineImages.length - 1 ? 0 : prev + 1));
+  };
+  
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? timelineImages.length - 1 : prev - 1));
   };
 
   return (
@@ -129,8 +149,53 @@ export default function AboutPage() {
         </section>
       </div>
 
+      {/* Mobile Image Carousel */}
+      <div className="md:hidden mx-auto my-6 px-4 fade-in">  
+        <h3 className="text-center text-xl font-semibold mb-3">Journey Images</h3>
+        <div className="relative">
+          <div className="w-full h-64 relative rounded-lg overflow-hidden">
+            <Image 
+              src={timelineImages[currentSlide].src}
+              alt={timelineImages[currentSlide].alt}
+              fill
+              className="object-cover"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 text-center">
+              <p className="font-medium">{timelineImages[currentSlide].title}</p>
+            </div>
+          </div>
+          
+          <button 
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-1 rounded-full"
+            onClick={prevSlide}
+            aria-label="Previous image"
+          >
+            <ArrowBackIosIcon fontSize="small" />
+          </button>
+          
+          <button 
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-1 rounded-full"
+            onClick={nextSlide}
+            aria-label="Next image"
+          >
+            <ArrowForwardIosIcon fontSize="small" />
+          </button>
+          
+          <div className="absolute -bottom-6 left-0 right-0 flex justify-center gap-1.5 mt-2">
+            {timelineImages.map((_, index) => (
+              <button
+                key={index}
+                className={`w-2 h-2 rounded-full ${index === currentSlide ? 'bg-blue-500' : 'bg-gray-400'}`}
+                onClick={() => setCurrentSlide(index)}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Timeline Section */}
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 mt-12 md:mt-0">
         <Timeline position="alternate">
           {/* Bachelor's Degree */}
           <TimelineItem className='fade-right py-3 sm:py-5'>
