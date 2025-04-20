@@ -62,11 +62,11 @@ export default function AboutPage() {
       />
       {/* Header Section */}
       <div className="w-full fade-in bg-[rgba(5,101,112,0.50)] px-4 sm:px-6">
-        <section className="max-w-[800px] mx-auto fade-in title-set flex flex-col md:flex-row py-8 md:py-12">
+        <section className="max-w-[800px] mx-auto fade-in title-set flex flex-col md:flex-row py-8 md:py-12s">
           {/* Left Column */}
           <div className="w-full md:w-1/2">
             <div className="flex flex-col sm:flex-row sm:items-center gap-4 relative mb-6">
-              <h1 className="text-4xl sm:text-5xl font-bold text-left">About Me</h1>
+              <h1 className="text-4xl sm:text-5xl font-bold whitespace-nowrap">About Me</h1>
               <div className='flex gap-4 mt-2 sm:mt-0'>
                 <a href="https://github.com/andywelly" target="_blank" rel="noopener noreferrer" title='Open Github'>
                   <GitHubIcon fontSize="large" />
