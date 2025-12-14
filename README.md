@@ -6,9 +6,8 @@ Welcome to my personal website! This project serves as a showcase of my portfoli
 
 ## Screenshots
 
-<img width="1507" alt="image" src="https://github.com/user-attachments/assets/6d6f85cb-59c4-4ac5-8cbb-f48a9534ce56" />
-<img width="1507" alt="image" src="https://github.com/user-attachments/assets/8e1c3449-3dfc-47ab-9d4a-7a76081e6025" />
-<img width="1507" alt="image" src="https://github.com/user-attachments/assets/68247d6b-4d87-4561-894a-20a019825629" />
+<img width="1507" alt="Home Screen" src="https://github.com/user-attachments/assets/ef0c88c1-ee19-42f7-9873-a67bc6eefb72" />
+<img width="1507" alt="About Page" src="https://github.com/user-attachments/assets/68247d6b-4d87-4561-894a-20a019825629" />
 
 ## Technologies
 
