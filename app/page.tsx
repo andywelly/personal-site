@@ -8,6 +8,7 @@ import CatanCard from '@/components/catancard';
 // import CardFlipImage from '@/components/cardflipimage';
 import AutoCompleteCard from '@/components/autocompletecard';
 import NbaCard from '@/components/nbacard';
+import ProjectJuanCard from '@/components/projectjuancard';
 
 export default function HomePage() {
   useEffect(() => {
@@ -65,7 +66,9 @@ export default function HomePage() {
         <div id="projects" className="scroll-mt-20 pt-6">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold my-8 py-4 text-center fade-in">Projects</h2>
         </div>
-        
+        <section className="fade-in info-set md:mb-8">
+          <ProjectJuanCard/>
+        </section>
         <section className="fade-in info-set md:mb-8">
           <LangwarrinCard/>
         </section>
