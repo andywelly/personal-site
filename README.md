@@ -50,6 +50,6 @@ To run this project locally, follow these steps:
 
 5.  Open your browser and go to `http://localhost:3000` to view the website.
 
-## Deployment (AWS Amplify)
+## Deployment
 
 This website is deployed using AWS Amplify.  Amplify simplifies the deployment process by providing a streamlined workflow for building, deploying, and hosting web applications.  Changes pushed to the main branch of the repository are automatically deployed to the live website.
