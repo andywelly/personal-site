@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { SiReact, SiJavascript, SiHtml5, SiCss3, SiPostgresql, SiAmazonwebservices} from 'react-icons/si';
 import { useRouter } from 'next/navigation';
 
@@ -28,8 +27,8 @@ export default function LangwarrinPage() {
           {/* Left Column: Image */}
           <div className="w-1/2">
             <Image
-              src="/langwarrin.png"
-              alt="Lagwarrin Community Centre Website"
+              src="/pjc.png"
+              alt="Project Juan Cares Website"
               width={600}
               height={400}
               className="w-full h-auto rounded-lg"
@@ -37,7 +36,7 @@ export default function LangwarrinPage() {
             <div className="text-center mt-8">
               <button
                 onClick={handleGoBack}
-                className="text-white outline-double hover:bg-[var(--langwarrin-color)] hover:border-4 border-dashed hover:border-white px-6 py-2 rounded transition-all duration-300"
+                className="text-white outline-double hover:bg-[var(--pjc-color)] hover:border-4 border-dashed hover:border-white px-6 py-2 rounded transition-all duration-300"
               >
                 Go Back
               </button>
@@ -49,16 +48,17 @@ export default function LangwarrinPage() {
             {/* First Section of Text */}
             <div className="mb-6">
               <p className="text-justify">
-              Leading a team of five, we partnered with the Langwarrin Community Centre to redesign and improve their existing website, 
-              focusing on accessibility and user experience. This involved close collaboration to understand their needs and translate 
-              them into technical requirements. <br/><br/>
-              The development process spanned the full software development lifecycle.  Initially scoped for MongoDB, we transitioned to 
-              Strapi (CMS) and PostgreSQL after client consultation, better aligning with their content management and scalability needs. 
-              This required adapting our architecture and data models.  We leveraged React.js for a dynamic front-end, implementing 
-              RESTful APIs for seamless Strapi back-end integration. <br/><br/>
-              The resulting web application provides the Langwarrin Community Centre with a modern and effective online presence, 
-              empowering them to connect with their community and share information.  This project honed our full-stack development skills, 
-              including front-end/back-end development, API design, database management, and teamwork using Git and Jira. <br/>
+              Collaborating closely with stakeholders as a freelance developer, I designed, built, and maintained a full-stack platform for 
+              the Project Juan Cares NDIS Provider. This partnership-driven approach involved regular communication and feedback loops to 
+              ensure the platform accurately reflected organisational values, service offerings, and compliance requirements. <br/><br/>
+
+              I worked directly with non-technical stakeholders to translate business goals, operational workflows, and user needs 
+              into clear technical requirements and practical solutions. Through iterative discussions and demonstrations, I adapted 
+              features and system behaviour as requirements evolved, ensuring the platform remained aligned with service delivery 
+              processes and improved both staff efficiency and client experience.<br/><br/>
+
+              Beyond initial delivery, I continued to support the platform through ongoing maintenance and feature development. 
+              <br/>
               </p>
             </div>
             <div className="flex flex-wrap gap-4 justify-center pt-4"> 
