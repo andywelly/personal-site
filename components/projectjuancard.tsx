@@ -49,7 +49,7 @@ export default function ProjectJuanCard() {
               <div className='text-center mt-3 md:mt-4'>
                 <Link
                   href="/pjc"
-                  className="text-white hover:bg-[var(--langwarrin-color)] hover:border-4 border-dashed hover:border-white px-4 md:px-6 py-1 md:py-2 rounded transition-all duration-300 text-sm md:text-base"
+                  className="text-white hover:bg-[var(--pjc-color)] hover:border-4 border-dashed hover:border-white px-4 md:px-6 py-1 md:py-2 rounded transition-all duration-300 text-sm md:text-base"
                 >
                   Read More
                 </Link>
