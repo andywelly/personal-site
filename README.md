@@ -52,4 +52,4 @@ To run this project locally, follow these steps:
 
 ## Deployment
 
-This website is deployed using AWS Amplify.  Amplify simplifies the deployment process by providing a streamlined workflow for building, deploying, and hosting web applications.  Changes pushed to the main branch of the repository are automatically deployed to the live website.
+This website is deployed using AWS. Changes pushed to the main branch of the repository are automatically deployed to the live website.
