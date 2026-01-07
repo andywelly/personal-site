@@ -27,7 +27,7 @@ export default function LangwarrinPage() {
           {/* Left Column: Image */}
           <div className="w-1/2">
             <Image
-              src="/pjc.png"
+              src="/PJC.png"
               alt="Project Juan Cares Website"
               width={600}
               height={400}
